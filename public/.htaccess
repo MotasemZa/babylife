@@ -1,0 +1,35 @@
+# Baby Life — static site (Astro build). Apache/LiteSpeed rules for Hostinger.
+
+RewriteEngine On
+
+# --- Certificates QR code (printed on product packaging — must never break) ---
+RewriteRule ^certificates\.aspx$ https://khattab.group/awards.html [R=301,L,NC]
+
+# --- Old WordPress URLs → new locations ------------------------------------
+# Blog posts moved from the site root to /blog/
+RewriteRule ^(taped-diapers-or-pants|stop-night-time-diaper-leaks|how-many-diapers-a-day|preventing-diaper-rash|diaper-size-chart-by-weight)/?$ /blog/$1/ [R=301,L]
+RewriteRule ^ar/(taped-diapers-or-pants|stop-night-time-diaper-leaks|how-many-diapers-a-day|preventing-diaper-rash|diaper-size-chart-by-weight)/?$ /ar/blog/$1/ [R=301,L]
+
+# Media library paths → /images/ (same year/month structure)
+RewriteRule ^wp-content/uploads/(.+)$ /images/$1 [R=301,L]
+
+# Old WP home alias and Yoast sitemap name
+RewriteRule ^home/?$ / [R=301,L]
+RewriteRule ^sitemap_index\.xml$ /sitemap-index.xml [R=301,L]
+
+# --- Errors ------------------------------------------------------------------
+ErrorDocument 404 /404.html
+
+# --- Caching -----------------------------------------------------------------
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/html "access plus 10 minutes"
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType image/webp "access plus 6 months"
+  ExpiresByType image/png "access plus 6 months"
+  ExpiresByType image/jpeg "access plus 6 months"
+  ExpiresByType image/svg+xml "access plus 6 months"
+</IfModule>
+
+AddDefaultCharset UTF-8
