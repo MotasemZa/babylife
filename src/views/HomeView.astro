@@ -16,10 +16,15 @@ const { lang } = Astro.props;
 const b = base(lang);
 
 const heroProduct = products[0];
-/* The box render, not the bag: the jumbo bag's wrinkled film and baked-in
-   highlights read as cheap at hero size, while the carton holds its geometry.
-   The bag stays where it belongs — in the gallery, at card size. */
-const heroImage = '/images/2026/07/baby-life-box-packaging-box-packaging-4-1.webp';
+/* A collection, not a single pack: the size-4 diaper bag front and centre
+   with the rest of the baby family fanned behind it. One pack reads as a
+   product; the family reads as a brand. */
+const heroCluster = {
+  front: '/images/2026/07/baby-life-jumbo-packaging-jumbo-packaging-4-1.webp',
+  backL: '/images/2026/07/baby-life-pants-jumbo-packaging-jumbo-packaging-6.webp',
+  backR: '/images/2026/07/super-active-baby-super-active-baby-jumbo-packaging-jumbo-packaging-4.webp',
+  mini:  '/images/2026/07/baby-life-90-wipes-4-baby-life-90-wipes-2.webp',
+};
 const galleryProducts = products.slice(0, 8);
 const latestPosts = posts.slice(0, 3);
 const rangeHero = (slug: string) => products.find((p) => p.ranges.includes(slug));
@@ -51,13 +56,16 @@ const description = lang === 'ar'
         </div>
       </div>
 
-      <div class="hero-media">
+      <div class="hero-media" data-fx>
         <div class="hero-stage" aria-hidden="true"></div>
-        <img
-          src={heroImage}
-          alt={heroProduct.thumbAlt || heroProduct.title[lang]}
-          width="800" height="800" fetchpriority="high"
-        />
+        <div class="hero-cluster">
+          <img class="hp hp-back-l" src={heroCluster.backL} alt="" loading="eager" width="500" height="500" />
+          <img class="hp hp-back-r" src={heroCluster.backR} alt="" loading="eager" width="500" height="500" />
+          <img class="hp hp-front" src={heroCluster.front}
+            alt={heroProduct.thumbAlt || heroProduct.title[lang]}
+            width="800" height="800" fetchpriority="high" />
+          <img class="hp hp-mini" src={heroCluster.mini} alt="" loading="eager" width="400" height="400" />
+        </div>
       </div>
     </div>
 
@@ -105,30 +113,34 @@ const description = lang === 'ar'
     </div>
   </section>
 
-  <section class="section section--tint-cream" id="quality">
-    <div class="wrap">
-      <div class="sec-head sec-head--wide reveal">
-        <span class="eyebrow">{t(lang, 'inside')}</span>
-        <h2>{t(lang, 'insideHeading')}</h2>
-        <p>{t(lang, 'insideLede')}</p>
-      </div>
+  <section class="section--tint-cream cut-story" id="quality">
+    <div class="cut-track">
+      <div class="cut-sticky">
+        <div class="wrap">
+          <div class="sec-head sec-head--wide reveal">
+            <span class="eyebrow">{t(lang, 'inside')}</span>
+            <h2>{t(lang, 'insideHeading')}</h2>
+            <p>{t(lang, 'insideLede')}</p>
+          </div>
 
-      <div class="cut-grid reveal">
-        <figure class="cut-figure">
-          <DiaperCutaway label={t(lang, 'insideFigure')} />
-        </figure>
+          <div class="cut-grid reveal">
+            <figure class="cut-figure">
+              <DiaperCutaway label={t(lang, 'insideFigure')} />
+            </figure>
 
-        <ol class="cut-layers">
-          {layers.map((layer, i) => (
-            <li>
-              <span class="cut-num" dir="ltr">{i + 1}</span>
-              <div>
-                <h3>{layer[lang][0]}</h3>
-                <p>{layer[lang][1]}</p>
-              </div>
-            </li>
-          ))}
-        </ol>
+            <ol class="cut-layers">
+              {layers.map((layer, i) => (
+                <li>
+                  <span class="cut-num" dir="ltr">{i + 1}</span>
+                  <div>
+                    <h3>{layer[lang][0]}</h3>
+                    <p>{layer[lang][1]}</p>
+                  </div>
+                </li>
+              ))}
+            </ol>
+          </div>
+        </div>
       </div>
     </div>
   </section>

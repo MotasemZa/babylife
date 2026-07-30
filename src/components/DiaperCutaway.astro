@@ -113,4 +113,30 @@ const SHAPE = `M78 30 H362 C386 30 396 48 396 76
     item.addEventListener('pointerenter', () => set(i, true));
     item.addEventListener('pointerleave', () => set(i, false));
   });
+
+  // The scroll story. The section is taller than the screen and the content
+  // is sticky, so for a few hundred pixels of scroll the reader is "inside"
+  // it — and each step of that journey lights the next layer, top sheet to
+  // indicator, in construction order. Scroll direction rewinds it. Hover
+  // still works on top; is-live and is-hot share a look.
+  const track = document.querySelector<HTMLElement>('.cut-track');
+  const svg = document.querySelector<SVGSVGElement>('.cutaway');
+  if (track && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    let tick = false;
+    const step = () => {
+      const r = track.getBoundingClientRect();
+      const span = r.height - window.innerHeight;
+      const q = span > 0 ? Math.min(1, Math.max(0, -r.top / span)) : 1;
+
+      const idx = Math.min(3, Math.floor(q * 4.35));
+      pins.forEach((p, i) => p.classList.toggle('is-live', i === idx));
+      items.forEach((it, i) => it.classList.toggle('is-live', i === idx));
+      if (svg) svg.style.transform = `rotate(${((q - 0.5) * 7).toFixed(2)}deg)`;
+      tick = false;
+    };
+    window.addEventListener('scroll', () => {
+      if (!tick) { tick = true; requestAnimationFrame(step); }
+    }, { passive: true });
+    step();
+  }
 </script>

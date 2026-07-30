@@ -60,6 +60,30 @@ const arPath = lang === 'ar' ? path : other;
       if ('IntersectionObserver' in window) {
         document.documentElement.classList.add('js-reveal');
       }
+
+      // Language routing, before paint so there is no English flash.
+      // An explicit choice (the header switcher) always wins and is
+      // remembered; with no choice recorded, an Arabic-preferring browser
+      // gets the Arabic home page. Home page only — a shared deep link
+      // should open exactly where it points.
+      (function () {
+        try {
+          var path = location.pathname;
+          var pref = localStorage.getItem('bl-lang');
+          if (path === '/' || path === '') {
+            if (pref === 'ar') {
+              location.replace('/ar/');
+            } else if (!pref) {
+              var langs = navigator.languages || [navigator.language || ''];
+              if (langs.some(function (l) { return /^ar\b/i.test(l); })) {
+                location.replace('/ar/');
+              }
+            }
+          } else if ((path === '/ar/' || path === '/ar') && pref === 'en') {
+            location.replace('/');
+          }
+        } catch (e) { /* storage blocked: stay put */ }
+      })();
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -78,17 +102,19 @@ const arPath = lang === 'ar' ? path : other;
           <img src="/images/2023/05/Baby-Life-Logo-01.png" alt="Baby Life" width="240" height="92" />
         </a>
 
-        <button class="nav-toggle" aria-expanded="false" aria-controls="primary-menu" aria-label={t(lang, 'menu')}>&#9776;</button>
-
         <ul class="nav-menu" id="primary-menu">
           {navItems.map((item) => (
             <li><a href={item.href} aria-current={isCurrent(item.href) ? 'page' : undefined}>{item.label}</a></li>
           ))}
         </ul>
 
-        <a class:list={['nav-lang', { 'is-latin': lang === 'ar' }]} href={other} hreflang={lang === 'ar' ? 'en' : 'ar'}>
-          {lang === 'ar' ? 'English' : 'العربية'}
-        </a>
+        <div class="nav-actions">
+          <a class:list={['nav-lang', { 'is-latin': lang === 'ar' }]} href={other} hreflang={lang === 'ar' ? 'en' : 'ar'}>
+            {lang === 'ar' ? 'English' : 'العربية'}
+          </a>
+          <a class="btn btn-primary nav-cta" href={`${b}/contact/`}>{t(lang, 'becomeStockist')}</a>
+          <button class="nav-toggle" aria-expanded="false" aria-controls="primary-menu" aria-label={t(lang, 'menu')}>&#9776;</button>
+        </div>
       </div>
     </header>
 
@@ -177,6 +203,47 @@ const arPath = lang === 'ar' ? path : other;
       }
 
       const noMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      // Remember an explicit language choice; the head script honours it on
+      // the next visit and stops second-guessing the reader.
+      document.querySelector('.nav-lang')?.addEventListener('click', function () {
+        try {
+          localStorage.setItem('bl-lang', this.getAttribute('hreflang') === 'ar' ? 'ar' : 'en');
+        } catch (e) {}
+      });
+
+      // Compact header once the page is moving.
+      const header = document.querySelector('.site-header');
+      let hTick = false;
+      const onHScroll = () => {
+        header?.classList.toggle('is-compact', window.scrollY > 40);
+        hTick = false;
+      };
+      window.addEventListener('scroll', () => {
+        if (!hTick) { hTick = true; requestAnimationFrame(onHScroll); }
+      }, { passive: true });
+      onHScroll();
+
+      // Scroll progress engine: every [data-fx] element gets --p, its own
+      // 0..1 journey through the viewport. CSS decides what that means —
+      // the fan of packs in the hero reads it, nothing else has to.
+      const fxEls = Array.from(document.querySelectorAll('[data-fx]'));
+      if (fxEls.length && !noMotion) {
+        let fxTick = false;
+        const fxUpdate = () => {
+          const vh = window.innerHeight;
+          for (const el of fxEls) {
+            const r = el.getBoundingClientRect();
+            const p = Math.min(1, Math.max(0, (vh - r.top) / (vh + r.height)));
+            el.style.setProperty('--p', p.toFixed(4));
+          }
+          fxTick = false;
+        };
+        window.addEventListener('scroll', () => {
+          if (!fxTick) { fxTick = true; requestAnimationFrame(fxUpdate); }
+        }, { passive: true });
+        fxUpdate();
+      }
 
       // Count-up on the hero figures. The digits animate; any prefix or
       // suffix ("#", "+") stays put, so "#1" never flashes as "#0".

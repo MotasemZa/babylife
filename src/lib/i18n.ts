@@ -126,6 +126,7 @@ const ui = {
   messageFailed: { en: 'Sorry, the message could not be sent. Please email us directly.', ar: 'عذراً، تعذّر إرسال الرسالة. راسلنا مباشرة عبر البريد الإلكتروني.' },
   emailUsAt: { en: 'Email us at', ar: 'راسلنا على' },
   mapLabel: { en: 'Map showing our location in Amman', ar: 'خريطة توضح موقعنا في عمّان' },
+  openGoogleMaps: { en: 'Open in Google Maps', ar: 'افتح في خرائط جوجل' },
   company: { en: 'Company', ar: 'الشركة' },
   forContact: { en: 'Contact', ar: 'للتواصل' },
   footerBlurb: {

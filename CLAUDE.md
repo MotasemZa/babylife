@@ -28,6 +28,19 @@ almost never the page templates.**
 - `src/views/*.astro` — one view per page type, shared by both languages via a `lang` prop.
 - `src/pages/` — thin route files; the `ar/` subtree mirrors the root and passes `lang="ar"`.
 
+## Behaviour to know about
+
+- A head script in `Base.astro` routes the home page by language: a stored explicit choice
+  (set when the header switcher is clicked, key `bl-lang`) always wins; otherwise an
+  Arabic-preferring browser landing on `/` is sent to `/ar/`. Deep links are never redirected.
+- `Base.astro` also runs the scroll machinery: `.site-header.is-compact` past 40px, a `--p`
+  viewport-progress variable on any `[data-fx]` element (the hero pack fan reads it), count-up
+  hero stats and pointer tilt on cards. Everything checks `prefers-reduced-motion`.
+- The home-page cutaway section is a sticky scroll story (`.cut-track`/`.cut-sticky`): the
+  section is ~210vh tall and the layer list lights up in construction order as you scroll.
+  Disabled under 900px and under reduced motion. Tall-viewport screenshots make this section
+  look like a huge blank gap — that is the track, not a bug.
+
 ## Rules
 
 - Every user-visible string must exist in both `en` and `ar`. Never hardcode English in a view.
