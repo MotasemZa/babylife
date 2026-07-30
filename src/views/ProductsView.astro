@@ -1,0 +1,46 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHead from '../components/PageHead.astro';
+import RangeChips from '../components/RangeChips.astro';
+import ProductCard from '../components/ProductCard.astro';
+import CtaBand from '../components/CtaBand.astro';
+import { t, type Lang } from '../lib/i18n';
+import products from '../data/products.json';
+import ranges from '../data/ranges.json';
+
+interface Props { lang: Lang; rangeSlug?: string }
+const { lang, rangeSlug = '' } = Astro.props;
+
+const range = ranges.find((r) => r.slug === rangeSlug);
+const list = range ? products.filter((p) => p.ranges.includes(range.slug)) : products;
+
+const title = range ? range.name[lang] : t(lang, 'ourProducts');
+const lede = range ? range.desc[lang] : t(lang, 'productsLede');
+const seoTitle = `${title} | Baby Life`;
+---
+
+<Base lang={lang} title={seoTitle} description={lede}>
+  <PageHead
+    lang={lang}
+    eyebrow={t(lang, 'theRange')}
+    title={title}
+    lede={lede}
+    arName={range?.name.ar ?? ''}
+  />
+
+  <section class="section">
+    <div class="wrap">
+      <RangeChips lang={lang} current={rangeSlug} />
+
+      {list.length > 0 ? (
+        <div class="gallery">
+          {list.map((p, i) => <ProductCard product={p} lang={lang} eager={i < 4} />)}
+        </div>
+      ) : (
+        <p>{t(lang, 'nothingInRange')}</p>
+      )}
+    </div>
+  </section>
+
+  <CtaBand lang={lang} contactButtons />
+</Base>

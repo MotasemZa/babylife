@@ -1,0 +1,24 @@
+---
+import JordanSeal from './JordanSeal.astro';
+import type { Lang } from '../lib/i18n';
+
+interface Props {
+  lang: Lang;
+  eyebrow: string;
+  title: string;
+  lede?: string;
+  arName?: string;
+  seal?: boolean;
+}
+const { lang, eyebrow, title, lede = '', arName = '', seal = true } = Astro.props;
+---
+
+<header class="page-head">
+  <div class="wrap">
+    <span class="eyebrow">{eyebrow}</span>
+    <h1>{title}</h1>
+    {arName && lang === 'en' && <p class="page-head-ar" dir="rtl">{arName}</p>}
+    {lede && <p class="lede">{lede}</p>}
+    {seal && <JordanSeal lang={lang} />}
+  </div>
+</header>

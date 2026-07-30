@@ -1,0 +1,26 @@
+---
+import { t, base, type Lang } from '../lib/i18n';
+import site from '../data/site.json';
+
+interface Props { lang: Lang; contactButtons?: boolean }
+const { lang, contactButtons = false } = Astro.props;
+const tel = site.contact.phone.replace(/[^+\d]/g, '');
+---
+
+<section class="cta">
+  <div class="wrap">
+    <span class="eyebrow">{t(lang, 'stockistsTrade')}</span>
+    <h2>{t(lang, 'ctaHeading')}</h2>
+    <p>{t(lang, 'ctaLede')}</p>
+    <div class="cta-actions">
+      {contactButtons ? (
+        <a class="btn btn-primary" href={`${base(lang)}/contact/`}>{t(lang, 'getInTouch')}</a>
+      ) : (
+        <>
+          <a class="btn btn-primary" dir="ltr" href={`tel:${tel}`}>{site.contact.phone}</a>
+          <a class="btn btn-ghost" dir="ltr" href={`mailto:${site.contact.email}`}>{site.contact.email}</a>
+        </>
+      )}
+    </div>
+  </div>
+</section>

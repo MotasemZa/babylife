@@ -1,0 +1,66 @@
+[
+  {
+    "slug": "babylife",
+    "name": {
+      "en": "Baby Care",
+      "ar": "العناية بالطفل"
+    },
+    "desc": {
+      "en": "Diapers, pants and wipes for every stage — from a newborn's first pack through to a toddler on the move.",
+      "ar": "حفاضات وبانتس ومناديل لكل مرحلة — من عبوة المولود الأولى وحتى طفل بدأ يمشي."
+    },
+    "sizes": {
+      "en": "Sizes 1–8 · Newborn to 4X-Large",
+      "ar": "المقاسات 1–8 · من حديث الولادة إلى 4X كبير"
+    },
+    "order": 1
+  },
+  {
+    "slug": "ladylife",
+    "name": {
+      "en": "Feminine Care",
+      "ar": "العناية النسائية"
+    },
+    "desc": {
+      "en": "Discreet, dependable protection across a full range of absorbencies, thicknesses and pack sizes.",
+      "ar": "حماية موثوقة وغير ملحوظة، بتشكيلة كاملة من درجات الامتصاص والسماكات وأحجام العبوات."
+    },
+    "sizes": {
+      "en": "Regular · Super · Night · Maxi",
+      "ar": "عادية · فائقة · ليلية · ماكسي"
+    },
+    "order": 2
+  },
+  {
+    "slug": "adult-care",
+    "name": {
+      "en": "Adult Care",
+      "ar": "عناية البالغين"
+    },
+    "desc": {
+      "en": "Briefs, pants and under pads designed around dignity, security and skin comfort.",
+      "ar": "حفاضات وبانتس ومفارش واقية، مصمّمة حول الكرامة والأمان وراحة البشرة."
+    },
+    "sizes": {
+      "en": "Small to XXL · briefs, pants, under pads",
+      "ar": "من صغير إلى XXL · حفاضات وبانتس ومفارش"
+    },
+    "order": 3
+  },
+  {
+    "slug": "life",
+    "name": {
+      "en": "Wipes & Tissues",
+      "ar": "المناديل والمحارم"
+    },
+    "desc": {
+      "en": "Everyday softness — scented wet wipes, facial tissues and make-up removers, held to the same standard as everything else we make.",
+      "ar": "نعومة يومية — مناديل مبللة معطّرة ومحارم ورقية ومزيلات مكياج، بالمعيار نفسه الذي نصنع به كل شيء."
+    },
+    "sizes": {
+      "en": "15 · 72 · 90 · 120 wipes",
+      "ar": "15 · 72 · 90 · 120 منديلاً"
+    },
+    "order": 4
+  }
+]

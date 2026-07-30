@@ -1,0 +1,10 @@
+---
+import ProductsView from '../../views/ProductsView.astro';
+import ranges from '../../data/ranges.json';
+
+export function getStaticPaths() {
+  return ranges.map((r) => ({ params: { slug: r.slug } }));
+}
+const { slug } = Astro.params;
+---
+<ProductsView lang="en" rangeSlug={slug!} />

@@ -1,0 +1,14 @@
+---
+import { t, base, type Lang } from '../lib/i18n';
+import ranges from '../data/ranges.json';
+
+interface Props { lang: Lang; current?: string }
+const { lang, current = '' } = Astro.props;
+---
+
+<nav class="chips" aria-label={t(lang, 'productRanges')}>
+  <a class:list={['chip', { 'is-on': !current }]} href={`${base(lang)}/products/`}>{t(lang, 'allProducts')}</a>
+  {ranges.map((r) => (
+    <a class:list={['chip', { 'is-on': current === r.slug }]} href={`${base(lang)}/range/${r.slug}/`}>{r.name[lang]}</a>
+  ))}
+</nav>

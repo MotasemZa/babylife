@@ -1,0 +1,26 @@
+---
+import { base, type Lang } from '../lib/i18n';
+import ranges from '../data/ranges.json';
+
+interface Props { product: any; lang: Lang; eager?: boolean }
+const { product, lang, eager = false } = Astro.props;
+
+const range = ranges.find((r) => product.ranges.includes(r.slug));
+---
+
+<a class="tile" href={`${base(lang)}/products/${product.slug}/`}>
+  <div class="shot">
+    <img
+      src={product.thumb}
+      alt={product.thumbAlt || product.title[lang]}
+      width="800"
+      height="800"
+      loading={eager ? 'eager' : 'lazy'}
+    />
+  </div>
+  <div class="cap">
+    {range && <span class="cap-range">{range.name[lang]}</span>}
+    <strong>{product.title[lang]}</strong>
+    {product.count && <span>{product.count}</span>}
+  </div>
+</a>

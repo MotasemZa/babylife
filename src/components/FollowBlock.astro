@@ -1,0 +1,58 @@
+---
+import { socialPaths } from '../lib/icons';
+import { t, type Lang } from '../lib/i18n';
+import site from '../data/site.json';
+
+interface Props { lang: Lang; tint?: string }
+const { lang, tint = '' } = Astro.props;
+
+const links = site.social as Record<string, string>;
+const handle = (url: string) => {
+  const path = new URL(url).pathname.replace(/\/+$/, '');
+  const slug = path.split('/').filter(Boolean).pop() ?? '';
+  return slug.startsWith('@') ? slug : '@' + slug;
+};
+const notes: Record<string, string> = {
+  facebook: t(lang, 'followFacebook'),
+  instagram: t(lang, 'followInstagram'),
+};
+---
+
+<section class:list={['section', 'follow', tint]} id="follow">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">{t(lang, 'followUs')}</span>
+      <h2>{t(lang, 'followHeading')}</h2>
+      <p>{t(lang, 'followLede')}</p>
+    </div>
+
+    <div class="follow-grid">
+      {['facebook', 'instagram'].map((key) => {
+        const net = socialPaths[key];
+        return (
+          <a class={`follow-card follow-card--${key}`} style={`--net:${net.colour}`} href={links[key]} target="_blank" rel="noopener noreferrer me">
+            <span class="follow-mark" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d={net.path}></path></svg></span>
+            <span class="follow-net">{lang === 'ar' ? net.ar : net.label}</span>
+            <span class="follow-handle" dir="ltr">{handle(links[key])}</span>
+            <span class="follow-note">{notes[key]}</span>
+            <span class="follow-go">{t(lang, 'follow')}<span class="follow-arrow" aria-hidden="true">&rarr;</span></span>
+          </a>
+        );
+      })}
+    </div>
+
+    <ul class="follow-more">
+      {['youtube', 'linkedin'].map((key) => {
+        const net = socialPaths[key];
+        return (
+          <li>
+            <a href={links[key]} target="_blank" rel="noopener noreferrer me" style={`--net:${net.colour}`}>
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d={net.path}></path></svg>
+              <span>{lang === 'ar' ? net.ar : net.label}</span>
+            </a>
+          </li>
+        );
+      })}
+    </ul>
+  </div>
+</section>

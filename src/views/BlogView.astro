@@ -1,0 +1,41 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHead from '../components/PageHead.astro';
+import CtaBand from '../components/CtaBand.astro';
+import { t, base, fmtDate, readMinutes, type Lang } from '../lib/i18n';
+import posts from '../data/posts.json';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const b = base(lang);
+
+const title = lang === 'ar' ? 'المدونة | بيبي لايف' : 'Journal | Baby Life';
+---
+
+<Base lang={lang} title={title} description={t(lang, 'journalLede')}>
+  <PageHead lang={lang} eyebrow={t(lang, 'journal')} title={t(lang, 'latestArticles')} lede={t(lang, 'journalLede')} seal={false} />
+
+  <section class="section">
+    <div class="wrap">
+      <div class="posts">
+        {posts.map((p) => (
+          <article class="post-card">
+            <a href={`${b}/blog/${p.slug}/`}>
+              <div class="thumb">
+                {p.thumb && <img src={p.thumb} alt={p.thumbAlt || p.title[lang]} loading="lazy" width="900" height="620" />}
+              </div>
+              <div class="body">
+                <div class="meta">
+                  {fmtDate(lang, p.date)} &middot; {t(lang, 'minRead').replace('%d', String(readMinutes(p.body[lang] || p.body.en)))}
+                </div>
+                <h3>{p.title[lang] || p.title.en}</h3>
+              </div>
+            </a>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <CtaBand lang={lang} contactButtons />
+</Base>

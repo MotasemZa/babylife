@@ -1,0 +1,18 @@
+---
+import { jordanStar } from '../lib/icons';
+import { t, type Lang } from '../lib/i18n';
+
+interface Props { lang: Lang; large?: boolean }
+const { lang, large = false } = Astro.props;
+---
+
+<span class:list={['jo-seal', { 'jo-seal--lg': large }]}>
+  <svg class="jo-flag" viewBox="0 0 12 6" role="img" aria-label={t(lang, 'flagOfJordan')} focusable="false">
+    <rect width="12" height="2" y="0" fill="#000"></rect>
+    <rect width="12" height="2" y="2" fill="#fff"></rect>
+    <rect width="12" height="2" y="4" fill="#007A3D"></rect>
+    <polygon points="0,0 6,3 0,6" fill="#CE1126"></polygon>
+    <polygon points={jordanStar} fill="#fff"></polygon>
+  </svg>
+  <span>{t(lang, 'madeInJordan')}</span>
+</span>

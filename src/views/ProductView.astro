@@ -1,0 +1,205 @@
+---
+import Base from '../layouts/Base.astro';
+import ProductCard from '../components/ProductCard.astro';
+import JordanSeal from '../components/JordanSeal.astro';
+import CtaBand from '../components/CtaBand.astro';
+import { t, base, type Lang } from '../lib/i18n';
+import products from '../data/products.json';
+import ranges from '../data/ranges.json';
+
+interface Props { lang: Lang; slug: string }
+const { lang, slug } = Astro.props;
+const b = base(lang);
+
+const product = products.find((p) => p.slug === slug)!;
+const range = ranges.find((r) => product.ranges.includes(r.slug));
+const siblings = range
+  ? products.filter((p) => p.slug !== slug && p.ranges.includes(range.slug)).slice(0, 4)
+  : [];
+
+const gallery = product.gallery;
+const first = gallery[0];
+const body = product.body[lang] || product.body.en;
+
+const seoTitle = lang === 'ar' ? (product.seo as any).titleAr : product.seo.title;
+const title = seoTitle?.replace(/%%[a-z_]+%%/g, '').trim() || `${product.title[lang]} | Baby Life`;
+const description = (lang === 'ar' && product.seo.desc.ar) ? product.seo.desc.ar : (product.seo.desc.en || '');
+---
+
+<Base lang={lang} title={title} description={description} ogImage={product.thumb}>
+  <article class="product">
+    <div class="wrap">
+      <nav class="crumbs" aria-label={t(lang, 'breadcrumb')}>
+        <a href={`${b}/products/`}>{t(lang, 'products')}</a>
+        {range && (
+          <>
+            <span aria-hidden="true">/</span>
+            <a href={`${b}/range/${range.slug}/`}>{range.name[lang]}</a>
+          </>
+        )}
+      </nav>
+
+      <div class="product-grid">
+        <div class="product-media">
+          {gallery.length > 0 ? (
+            <>
+              <figure class="product-shot" id="pgal">
+                <img
+                  id="pgal-img"
+                  src={first.src}
+                  alt={`${product.title[lang]} — ${first[lang]}`}
+                  width="800"
+                  height="800"
+                  fetchpriority="high"
+                />
+                <figcaption id="pgal-cap" class="product-cap">{first[lang]}</figcaption>
+              </figure>
+
+              {gallery.length > 1 && (
+                <div class="pgal-thumbs" role="group" aria-label={t(lang, 'packSizesFormats')}>
+                  {gallery.map((g, i) => (
+                    <button
+                      type="button"
+                      class:list={['pgal-thumb', { 'is-on': i === 0 }]}
+                      data-full={g.src}
+                      data-cap={g[lang]}
+                      aria-label={g[lang]}
+                      aria-current={i === 0 ? 'true' : undefined}
+                    >
+                      <img src={g.src} alt="" loading="lazy" width="80" height="80" />
+                    </button>
+                  ))}
+                </div>
+              )}
+            </>
+          ) : (
+            product.thumb && (
+              <figure class="product-shot">
+                <img src={product.thumb} alt={product.thumbAlt || product.title[lang]} width="800" height="800" />
+              </figure>
+            )
+          )}
+        </div>
+
+        <div class="product-info">
+          {range && <span class="eyebrow">{range.name[lang]}</span>}
+
+          <h1>{product.title[lang]}</h1>
+
+          {lang === 'en' && product.arabicName && <p class="product-ar" dir="rtl">{product.arabicName}</p>}
+
+          {(product.count || product.sizes) && (
+            <ul class="spec">
+              {product.count && (
+                <li>
+                  <span class="k">{t(lang, 'pack')}</span>
+                  <span class="v">{product.count}</span>
+                </li>
+              )}
+              {product.sizes && (
+                <li>
+                  <span class="k">{t(lang, 'range')}</span>
+                  <span class="v">{product.sizes}</span>
+                </li>
+              )}
+              {gallery.length > 0 && (
+                <li>
+                  <span class="k">{t(lang, 'variants')}</span>
+                  <span class="v" dir="ltr">{gallery.length}</span>
+                </li>
+              )}
+            </ul>
+          )}
+
+          <div class="entry product-copy" set:html={body} />
+
+          {product.formats.length > 0 && (
+            <div class="formats">
+              <h2 class="mini-head">{t(lang, 'availableAs')}</h2>
+              <ul class="pills">
+                {product.formats.map((f) => <li>{lang === 'ar' ? f[1] : f[0]}</li>)}
+              </ul>
+            </div>
+          )}
+
+          <JordanSeal lang={lang} large />
+
+          <div class="product-cta">
+            <a class="btn btn-primary" href={`${b}/contact/`}>{t(lang, 'stockProduct')}</a>
+            <a class="btn btn-ghost" href={`${b}/products/`}>{t(lang, 'seeFullRange')}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  {product.chart.length > 0 && (
+    <section class="section section--tint-sage">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="eyebrow">{t(lang, 'sizeGuide')}</span>
+          <h2>{t(lang, 'sizeGuideHeading')}</h2>
+          <p>{t(lang, 'sizeGuideLede')}</p>
+        </div>
+
+        <div class="chart-scroll">
+          <table class="chart">
+            <thead>
+              <tr>
+                <th>{t(lang, 'size')}</th>
+                <th>{t(lang, 'name')}</th>
+                <th>{t(lang, 'weight')}</th>
+                <th>{t(lang, 'jumboPack')}</th>
+              </tr>
+            </thead>
+            <tbody>
+              {product.chart.map((row: any) => (
+                <tr>
+                  <td class="c-size" dir="ltr">{row.size}</td>
+                  <td>{lang === 'ar' ? row.name_ar : row.name_en}</td>
+                  <td dir="ltr">{lang === 'ar' ? row.wt_ar : row.wt_en}</td>
+                  <td dir="ltr">{row.count}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  )}
+
+  {siblings.length > 0 && range && (
+    <section class="section section--tint-cream">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="eyebrow">{t(lang, 'moreFrom')}</span>
+          <h2>{range.name[lang]}</h2>
+        </div>
+        <div class="gallery">
+          {siblings.map((p) => <ProductCard product={p} lang={lang} />)}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <CtaBand lang={lang} />
+
+  <script>
+    // Gallery: clicking a thumbnail swaps the main shot and caption.
+    const img = document.getElementById('pgal-img') as HTMLImageElement | null;
+    const cap = document.getElementById('pgal-cap');
+    const thumbs = document.querySelectorAll<HTMLButtonElement>('.pgal-thumb');
+    thumbs.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        if (!img) return;
+        img.src = btn.dataset.full || img.src;
+        if (cap) cap.textContent = btn.dataset.cap || '';
+        thumbs.forEach((b) => {
+          b.classList.toggle('is-on', b === btn);
+          if (b === btn) b.setAttribute('aria-current', 'true');
+          else b.removeAttribute('aria-current');
+        });
+      });
+    });
+  </script>
+</Base>

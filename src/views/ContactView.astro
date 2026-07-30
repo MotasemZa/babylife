@@ -1,0 +1,98 @@
+---
+import Base from '../layouts/Base.astro';
+import SocialRow from '../components/SocialRow.astro';
+import FollowBlock from '../components/FollowBlock.astro';
+import { t, type Lang } from '../lib/i18n';
+import site from '../data/site.json';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+
+const tel = site.contact.phone.replace(/[^+\d]/g, '');
+const { lat, lng } = site.contact.map;
+const bbox = `${lng - 0.008},${lat - 0.004},${lng + 0.008},${lat + 0.004}`;
+const mapSrc = `https://www.openstreetmap.org/export/embed.html?bbox=${bbox}&layer=mapnik&marker=${lat},${lng}`;
+
+const title = lang === 'ar' ? 'اتصل بنا | بيبي لايف' : 'Contact | Baby Life';
+---
+
+<Base lang={lang} title={title} description={t(lang, 'contactLede')}>
+  <section class="section">
+    <div class="wrap">
+      <header class="page-hero" style="padding-top:0">
+        <span class="eyebrow">{t(lang, 'getInTouch')}</span>
+        <h1>{t(lang, 'contact')}</h1>
+        <p class="lede">{t(lang, 'contactLede')}</p>
+      </header>
+
+      <div class="contact-grid" style="margin-top:2.4rem">
+        <div>
+          <ul class="contact-list">
+            <li>
+              <span class="k">{t(lang, 'location')}</span>
+              <span class="v">{site.contact.address[lang]}</span>
+            </li>
+            <li>
+              <span class="k">{t(lang, 'phone')}</span>
+              <span class="v"><a dir="ltr" href={`tel:${tel}`}>{site.contact.phone}</a></span>
+            </li>
+            <li>
+              <span class="k">{t(lang, 'email')}</span>
+              <span class="v"><a dir="ltr" href={`mailto:${site.contact.email}`}>{site.contact.email}</a></span>
+            </li>
+            <li>
+              <span class="k">{t(lang, 'hours')}</span>
+              <span class="v">{site.contact.hours[lang]}</span>
+            </li>
+            <li>
+              <span class="k">{t(lang, 'social')}</span>
+              <span class="v"><SocialRow light /></span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="contact-card">
+          <h2 style="font-size:clamp(1.5rem,2.4vw,2rem);margin-bottom:1.4rem">{t(lang, 'sendMessage')}</h2>
+
+          <div class="form-note form-note--ok" data-note="ok" hidden>{t(lang, 'messageSent')}</div>
+          <div class="form-note form-note--err" data-note="err" hidden>{t(lang, 'messageFailed')}</div>
+
+          <form class="form-grid" method="POST" action="/contact-form.php" style="margin-top:1rem">
+            <label>
+              {t(lang, 'yourName')}
+              <input type="text" name="name" required autocomplete="name" />
+            </label>
+            <label>
+              {t(lang, 'yourEmail')}
+              <input type="email" name="email" required autocomplete="email" dir="ltr" />
+            </label>
+            <label>
+              {t(lang, 'yourMessage')}
+              <textarea name="message" required></textarea>
+            </label>
+            <input type="text" name="company" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true" />
+            <input type="hidden" name="lang" value={lang} />
+            <button class="btn btn-primary" type="submit">{t(lang, 'send')}</button>
+          </form>
+
+          <p style="margin-top:1.2rem;font-size:.92rem;color:var(--ink-soft)">
+            {t(lang, 'emailUsAt')} <a href={`mailto:${site.contact.email}`} dir="ltr">{site.contact.email}</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="map-embed">
+        <iframe src={mapSrc} title={t(lang, 'mapLabel')} loading="lazy" referrerpolicy="no-referrer"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <FollowBlock lang={lang} tint="section--tint-cream" />
+
+  <script>
+    // Show a sent/failed note when the form endpoint redirects back.
+    const q = new URLSearchParams(location.search);
+    if (q.has('sent')) document.querySelector<HTMLElement>('[data-note="ok"]')?.removeAttribute('hidden');
+    if (q.has('error')) document.querySelector<HTMLElement>('[data-note="err"]')?.removeAttribute('hidden');
+  </script>
+</Base>

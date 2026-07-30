@@ -1,0 +1,64 @@
+{
+  "name": "Baby Life",
+  "tagline": {
+    "en": "Jordan's #1 Diapers",
+    "ar": "حفاضات الأردن الأولى"
+  },
+  "hero": {
+    "kicker_ar": "حفاضات بيبي لايف",
+    "est": "Amman · Since 1990",
+    "heading": {
+      "en": "The diaper Jordan trusts <em>most.</em>",
+      "ar": "الحفاض الأكثر ثقة في <em>الأردن.</em>"
+    },
+    "lede": {
+      "en": "Number one by market share — because every Baby Life diaper is made here, tested here, and built for the families who use it.",
+      "ar": "الأولى بالحصة السوقية — لأن كل حفاض بيبي لايف يُصنع هنا، ويُختبر هنا، ومصمّم للعائلات التي تستخدمه."
+    }
+  },
+  "stats": [
+    {
+      "n": "#1",
+      "l": {
+        "en": "Diaper brand in Jordan, measured by market share",
+        "ar": "علامة الحفاضات الأولى في الأردن بالحصة السوقية"
+      }
+    },
+    {
+      "n": "30+",
+      "l": {
+        "en": "Years manufacturing in Amman",
+        "ar": "عاماً من التصنيع في عمّان"
+      }
+    },
+    {
+      "n": "4",
+      "l": {
+        "en": "Care ranges, one quality standard — baby, feminine, adult and wipes",
+        "ar": "تشكيلات عناية بمعيار جودة واحد — طفل، نسائية، بالغون، ومناديل"
+      }
+    }
+  ],
+  "contact": {
+    "phone": "+962 7 9007 7779",
+    "email": "info@khattab.group",
+    "address": {
+      "en": "Al Qastal 16197, Amman",
+      "ar": "القسطل 16197، عمّان"
+    },
+    "hours": {
+      "en": "Sat–Thu · 8:00–17:00",
+      "ar": "السبت–الخميس · 8:00–17:00"
+    },
+    "map": {
+      "lat": 31.744443,
+      "lng": 35.975029
+    }
+  },
+  "social": {
+    "facebook": "https://www.facebook.com/BabyLifeDiapers",
+    "instagram": "https://www.instagram.com/babylifediapers",
+    "youtube": "https://www.youtube.com/@babylife7552",
+    "linkedin": "https://www.linkedin.com/company/babylifediapers"
+  }
+}

@@ -1,7 +1,5 @@
 node_modules
 dist
-dist-ssr
-*.local
-.env
-.env.*
+.astro
 .DS_Store
+*.local

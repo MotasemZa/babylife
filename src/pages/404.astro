@@ -1,0 +1,19 @@
+---
+import Base from '../layouts/Base.astro';
+import RangeChips from '../components/RangeChips.astro';
+import { t } from '../lib/i18n';
+---
+
+<Base lang="en" title="Page not found | Baby Life" description={t('en', 'notFoundLede')}>
+  <section class="error-hero">
+    <div class="wrap">
+      <span class="num" aria-hidden="true">404</span>
+      <h1>{t('en', 'notFound')}</h1>
+      <p class="lede" style="max-width:46ch;margin-inline:auto;color:var(--ink-soft)">{t('en', 'notFoundLede')}</p>
+      <div style="display:flex;justify-content:center;margin-block:1.6rem">
+        <RangeChips lang="en" />
+      </div>
+      <a class="btn btn-primary" href="/">{t('en', 'backHome')}</a>
+    </div>
+  </section>
+</Base>

@@ -1,0 +1,18 @@
+---
+import { socialPaths } from '../lib/icons';
+import site from '../data/site.json';
+
+interface Props { light?: boolean }
+const { light = false } = Astro.props;
+const links = site.social as Record<string, string>;
+---
+
+<div class:list={['social-row', { 'social-row--light': light }]}>
+  {Object.entries(socialPaths).map(([key, net]) =>
+    links[key] ? (
+      <a class="social-btn" href={links[key]} target="_blank" rel="noopener noreferrer" aria-label={net.label} title={net.label}>
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d={net.path}></path></svg>
+      </a>
+    ) : null
+  )}
+</div>

@@ -1,0 +1,173 @@
+---
+import Base from '../layouts/Base.astro';
+import ProductCard from '../components/ProductCard.astro';
+import FollowBlock from '../components/FollowBlock.astro';
+import CtaBand from '../components/CtaBand.astro';
+import { t, base, benefits, fmtDate, type Lang } from '../lib/i18n';
+import site from '../data/site.json';
+import ranges from '../data/ranges.json';
+import products from '../data/products.json';
+import posts from '../data/posts.json';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const b = base(lang);
+
+const heroProduct = products[0];
+const galleryProducts = products.slice(0, 8);
+const latestPosts = posts.slice(0, 3);
+const rangeHero = (slug: string) => products.find((p) => p.ranges.includes(slug));
+
+const title = lang === 'ar'
+  ? 'بيبي لايف | علامة الحفاضات الأولى في الأردن، صنع في عمّان'
+  : "Baby Life | Jordan's #1 Diaper Brand, Made in Amman";
+const description = lang === 'ar'
+  ? 'بيبي لايف هي علامة الحفاضات الأولى في الأردن — حفاضات أطفال ناعمة وعالية الامتصاص، وعناية نسائية ومناديل، تُصنّع في عمّان لدى مجموعة الخطاب.'
+  : 'Baby Life is Jordan’s number one diaper brand — soft, highly absorbent baby diapers, feminine care and tissues manufactured in Amman by Khattab Group.';
+---
+
+<Base lang={lang} title={title} description={description}>
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="bilingual">
+          {lang === 'en' && <><span class="ar" dir="rtl">{site.hero.kicker_ar}</span><span class="bar"></span></>}
+          <span class="est" dir="ltr">{site.hero.est}</span>
+        </div>
+
+        <h1 set:html={site.hero.heading[lang]} />
+
+        <p class="hero-lede">{site.hero.lede[lang]}</p>
+
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#ranges">{t(lang, 'exploreRange')}</a>
+          <a class="btn btn-ghost" href={`${b}/contact/`}>{t(lang, 'becomeStockist')}</a>
+        </div>
+      </div>
+
+      <div class="hero-media">
+        <div class="hero-photo hero-photo--pack">
+          <img src={heroProduct.thumb} alt={heroProduct.thumbAlt || heroProduct.title[lang]} width="800" height="800" fetchpriority="high" />
+        </div>
+        <div class="hero-badge">
+          <span class="num" dir="ltr">{site.stats[0].n}</span>
+          <span class="lbl">{site.stats[0].l[lang]}</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="ranges">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">{t(lang, 'theRanges')}</span>
+        <h2>{t(lang, 'rangesHeading')}</h2>
+        <p>{t(lang, 'rangesLede')}</p>
+      </div>
+
+      <div class="families">
+        {ranges.map((range) => {
+          const hero = rangeHero(range.slug);
+          return (
+            <article class="family reveal">
+              <a class="shot" href={`${b}/range/${range.slug}/`}>
+                {hero && <img src={hero.thumb} alt={hero.thumbAlt || hero.title[lang]} loading="lazy" width="800" height="800" />}
+              </a>
+              <div class="body">
+                {lang === 'en' && range.name.ar && <div class="ar-name" dir="rtl">{range.name.ar}</div>}
+                <h3><a href={`${b}/range/${range.slug}/`}>{range.name[lang]}</a></h3>
+                {range.desc[lang] && <p>{range.desc[lang]}</p>}
+                {range.sizes[lang] && <div class="sizes">{range.sizes[lang]}</div>}
+              </div>
+            </article>
+          );
+        })}
+      </div>
+    </div>
+  </section>
+
+  <section class="section-tight" id="story">
+    <div class="wrap">
+      <div class="heritage reveal">
+        <div class="heritage-inner">
+          <div>
+            <span class="eyebrow">{t(lang, 'madeInJordan')}</span>
+            <h2>{t(lang, 'heritageHeading')}</h2>
+            <p>{t(lang, 'heritageLede')}</p>
+          </div>
+          <ul class="h-stats">
+            {site.stats.map((s) => (
+              <li class="h-stat">
+                <span class="n" dir="ltr">{s.n}</span>
+                <span class="l">{s.l[lang]}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tint-sage" id="quality">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">{t(lang, 'quality')}</span>
+        <h2>{t(lang, 'qualityHeading')}</h2>
+      </div>
+      <div class="ben-grid">
+        {benefits.map((bnf, i) => (
+          <div class="ben reveal">
+            <span class="idx" dir="ltr">{String(i + 1).padStart(2, '0')}</span>
+            <h3>{bnf[lang][0]}</h3>
+            <p>{bnf[lang][1]}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tint-cream" id="gallery">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">{t(lang, 'productGallery')}</span>
+        <h2>{t(lang, 'fullRange')}</h2>
+        <p>{t(lang, 'fullRangeLede')}</p>
+      </div>
+      <div class="gallery">
+        {galleryProducts.map((p) => <ProductCard product={p} lang={lang} />)}
+      </div>
+      <div class="gallery-more">
+        <a class="btn btn-ghost" href={`${b}/products/`}>
+          {t(lang, 'seeAllProducts').replace('%d', String(products.length))}
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tint-blue" id="journal">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">{t(lang, 'journal')}</span>
+        <h2>{t(lang, 'journalHeading')}</h2>
+      </div>
+      <div class="posts">
+        {latestPosts.map((p) => (
+          <article class="post-card reveal">
+            <a href={`${b}/blog/${p.slug}/`}>
+              <div class="thumb">
+                {p.thumb && <img src={p.thumb} alt={p.thumbAlt || p.title[lang]} loading="lazy" width="900" height="620" />}
+              </div>
+              <div class="body">
+                <div class="meta">{fmtDate(lang, p.date)}</div>
+                <h3>{p.title[lang]}</h3>
+              </div>
+            </a>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <FollowBlock lang={lang} />
+  <CtaBand lang={lang} />
+</Base>

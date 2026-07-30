@@ -1,0 +1,1634 @@
+[
+  {
+    "slug": "baby-life-diapers",
+    "order": 101,
+    "title": {
+      "en": "Baby Life Diapers",
+      "ar": "حفاضات بيبي لايف"
+    },
+    "arabicName": "حفاضات بيبي لايف",
+    "body": {
+      "en": "<p class=\"has-large-font-size\">Nine sizes, five pack formats, one standard — from a newborn&#8217;s first pack through to a toddler well past 20 kg.</p>\n<ul>\n<li><strong>Medical belt</strong> — a shaped waistband that supports natural movement as your baby learns to walk.</li>\n<li><strong>Wetness indicator</strong> — a colour-changing strip tells you when a change is due, without unfastening the diaper.</li>\n<li><strong>Lotion with Vitamin E</strong> — a liner treated to stay gentle on new skin through a full night&#8217;s wear.</li>\n<li><strong>High-absorbency core</strong> — draws moisture away quickly and locks it in, so your baby wakes up comfortable rather than damp.</li>\n</ul>\n<p>Made at our facility in Al Qastal, Amman. Awarded Best Jordanian Product and certified a Green Factory.</p>",
+      "ar": "<p class=\"has-large-font-size\">تسعة مقاسات، وخمسة أشكال عبوات، ومعيار واحد — من عبوة المولود الأولى وحتى طفل تجاوز العشرين كيلوغراماً.</p>\n<ul>\n<li><strong>الحزام الطبي</strong> — حزام مشكّل يدعم الحركة الطبيعية بينما يتعلّم طفلك المشي.</li>\n<li><strong>مؤشر البلل</strong> — شريط يتغيّر لونه ليخبرك بموعد التغيير، دون الحاجة لفك الحفاض.</li>\n<li><strong>لوشن بفيتامين E</strong> — طبقة داخلية معالَجة لتبقى لطيفة على البشرة الجديدة طوال الليل.</li>\n<li><strong>نواة عالية الامتصاص</strong> — تسحب الرطوبة بسرعة وتحتجزها، ليستيقظ طفلك مرتاحاً لا مبتلاً.</li>\n</ul>\n<p>يُصنع في مصنعنا في القسطل بعمّان. حائز على جائزة أفضل منتج أردني، ومعتمَد كمصنع أخضر.</p>"
+    },
+    "count": "Sizes 1–8",
+    "sizes": "Newborn to 4X-Large",
+    "formats": [
+      [
+        "Mini pack",
+        "عبوة صغيرة"
+      ],
+      [
+        "Economy pack",
+        "عبوة اقتصادية"
+      ],
+      [
+        "Jumbo pack",
+        "عبوة جامبو"
+      ],
+      [
+        "Giant pack",
+        "عبوة عملاقة"
+      ],
+      [
+        "Box",
+        "عبوة كرتونية"
+      ]
+    ],
+    "chart": [
+      {
+        "size": 1,
+        "name_en": "Newborn",
+        "name_ar": "حديث الولادة",
+        "wt_en": "2–5 kg",
+        "wt_ar": "2–5 كغم",
+        "count": 56
+      },
+      {
+        "size": 2,
+        "name_en": "Small",
+        "name_ar": "صغير",
+        "wt_en": "3–6 kg",
+        "wt_ar": "3–6 كغم",
+        "count": 56
+      },
+      {
+        "size": 3,
+        "name_en": "Medium",
+        "name_ar": "وسط",
+        "wt_en": "4–9 kg",
+        "wt_ar": "4–9 كغم",
+        "count": 48
+      },
+      {
+        "size": 4,
+        "name_en": "Large",
+        "name_ar": "كبير",
+        "wt_en": "7–14 kg",
+        "wt_ar": "7–14 كغم",
+        "count": 44
+      },
+      {
+        "size": "4+",
+        "name_en": "Large +",
+        "name_ar": "كبير +",
+        "wt_en": "10–15 kg",
+        "wt_ar": "10–15 كغم",
+        "count": 40
+      },
+      {
+        "size": 5,
+        "name_en": "Maxi",
+        "name_ar": "ماكسي",
+        "wt_en": "11–18 kg",
+        "wt_ar": "11–18 كغم",
+        "count": 36
+      },
+      {
+        "size": 6,
+        "name_en": "XXL",
+        "name_ar": "XXL",
+        "wt_en": "18+ kg",
+        "wt_ar": "18+ كغم",
+        "count": 32
+      },
+      {
+        "size": 7,
+        "name_en": "XXXL",
+        "name_ar": "XXXL",
+        "wt_en": "20+ kg",
+        "wt_ar": "20+ كغم",
+        "count": 26
+      },
+      {
+        "size": 8,
+        "name_en": "4X-Large",
+        "name_ar": "4X كبير",
+        "wt_en": "22+ kg",
+        "wt_ar": "22+ كغم",
+        "count": 24
+      }
+    ],
+    "gallery": [
+      {
+        "src": "/images/2026/07/baby-life-jumbo-packaging-jumbo-packaging-1.webp",
+        "en": "Jumbo pack · Size 1 · 2–5 kg",
+        "ar": "عبوة جامبو · مقاس 1 · 2–5 كغم",
+        "group": "Jumbo pack"
+      },
+      {
+        "src": "/images/2026/07/baby-life-jumbo-packaging-jumbo-packaging-2.webp",
+        "en": "Jumbo pack · Size 2 · 3–6 kg",
+        "ar": "عبوة جامبو · مقاس 2 · 3–6 كغم",
+        "group": "Jumbo pack"
+      },
+      {
+        "src": "/images/2026/07/baby-life-jumbo-packaging-jumbo-packaging-3.webp",
+        "en": "Jumbo pack · Size 3 · 4–9 kg",
+        "ar": "عبوة جامبو · مقاس 3 · 4–9 كغم",
+        "group": "Jumbo pack"
+      },
+      {
+        "src": "/images/2026/07/baby-life-jumbo-packaging-jumbo-packaging-4-1.webp",
+        "en": "Jumbo pack · Size 4 · 7–14 kg",
+        "ar": "عبوة جامبو · مقاس 4 · 7–14 كغم",
+        "group": "Jumbo pack"
+      },
+      {
+        "src": "/images/2026/07/baby-life-jumbo-packaging-jumbo-packaging-4.webp",
+        "en": "Jumbo pack · Size 4+ · 10–15 kg",
+        "ar": "عبوة جامبو · مقاس 4+ · 10–15 كغم",
+        "group": "Jumbo pack"
+      },
+      {
+        "src": "/images/2026/07/baby-life-jumbo-packaging-jumbo-packaging-5.webp",
+        "en": "Jumbo pack · Size 5 · 11–18 kg",
+        "ar": "عبوة جامبو · مقاس 5 · 11–18 كغم",
+        "group": "Jumbo pack"
+      },
+      {
+        "src": "/images/2026/07/baby-life-jumbo-packaging-jumbo-packaging-6.webp",
+        "en": "Jumbo pack · Size 6 · 18+ kg",
+        "ar": "عبوة جامبو · مقاس 6 · 18+ كغم",
+        "group": "Jumbo pack"
+      },
+      {
+        "src": "/images/2026/07/baby-life-jumbo-packaging-jumbo-packaging-7.webp",
+        "en": "Jumbo pack · Size 7 · 20+ kg",
+        "ar": "عبوة جامبو · مقاس 7 · 20+ كغم",
+        "group": "Jumbo pack"
+      },
+      {
+        "src": "/images/2026/07/baby-life-jumbo-packaging-jumbo-packaging-8.webp",
+        "en": "Jumbo pack · Size 8 · 22+ kg",
+        "ar": "عبوة جامبو · مقاس 8 · 22+ كغم",
+        "group": "Jumbo pack"
+      },
+      {
+        "src": "/images/2026/07/baby-life-giant-packaging-giant-packaging-3.webp",
+        "en": "Giant pack · Size 3 · 4–9 kg",
+        "ar": "عبوة عملاقة · مقاس 3 · 4–9 كغم",
+        "group": "Giant pack"
+      },
+      {
+        "src": "/images/2026/07/baby-life-giant-packaging-giant-packaging-4.webp",
+        "en": "Giant pack · Size 4 · 7–14 kg",
+        "ar": "عبوة عملاقة · مقاس 4 · 7–14 كغم",
+        "group": "Giant pack"
+      },
+      {
+        "src": "/images/2026/07/baby-life-giant-packaging-giant-packaging-5.webp",
+        "en": "Giant pack · Size 5 · 11–18 kg",
+        "ar": "عبوة عملاقة · مقاس 5 · 11–18 كغم",
+        "group": "Giant pack"
+      },
+      {
+        "src": "/images/2026/07/baby-life-giant-packaging-giant-packaging-6.webp",
+        "en": "Giant pack · Size 6 · 18+ kg",
+        "ar": "عبوة عملاقة · مقاس 6 · 18+ كغم",
+        "group": "Giant pack"
+      },
+      {
+        "src": "/images/2026/07/baby-life-box-packaging-box-packaging-2.webp",
+        "en": "Box · Size 2 · 3–6 kg",
+        "ar": "عبوة كرتونية · مقاس 2 · 3–6 كغم",
+        "group": "Box"
+      },
+      {
+        "src": "/images/2026/07/baby-life-box-packaging-box-packaging-3.webp",
+        "en": "Box · Size 3 · 4–9 kg",
+        "ar": "عبوة كرتونية · مقاس 3 · 4–9 كغم",
+        "group": "Box"
+      },
+      {
+        "src": "/images/2026/07/baby-life-box-packaging-box-packaging-4-1.webp",
+        "en": "Box · Size 4 · 7–14 kg",
+        "ar": "عبوة كرتونية · مقاس 4 · 7–14 كغم",
+        "group": "Box"
+      },
+      {
+        "src": "/images/2026/07/baby-life-box-packaging-box-packaging-4.webp",
+        "en": "Box · Size 4+ · 10–15 kg",
+        "ar": "عبوة كرتونية · مقاس 4+ · 10–15 كغم",
+        "group": "Box"
+      },
+      {
+        "src": "/images/2026/07/baby-life-box-packaging-box-packaging-5.webp",
+        "en": "Box · Size 5 · 11–18 kg",
+        "ar": "عبوة كرتونية · مقاس 5 · 11–18 كغم",
+        "group": "Box"
+      },
+      {
+        "src": "/images/2026/07/baby-life-box-packaging-box-packaging-6.webp",
+        "en": "Box · Size 6 · 18+ kg",
+        "ar": "عبوة كرتونية · مقاس 6 · 18+ كغم",
+        "group": "Box"
+      },
+      {
+        "src": "/images/2026/07/baby-life-box-packaging-box-packaging-7.webp",
+        "en": "Box · Size 7 · 20+ kg",
+        "ar": "عبوة كرتونية · مقاس 7 · 20+ كغم",
+        "group": "Box"
+      },
+      {
+        "src": "/images/2026/07/baby-life-economic-packaging-economic-packaging-2.webp",
+        "en": "Economy pack · Size 2 · 3–6 kg",
+        "ar": "عبوة اقتصادية · مقاس 2 · 3–6 كغم",
+        "group": "Economy pack"
+      },
+      {
+        "src": "/images/2026/07/baby-life-economic-packaging-economic-packaging-3.webp",
+        "en": "Economy pack · Size 3 · 4–9 kg",
+        "ar": "عبوة اقتصادية · مقاس 3 · 4–9 كغم",
+        "group": "Economy pack"
+      },
+      {
+        "src": "/images/2026/07/baby-life-economic-packaging-economic-packaging-4.webp",
+        "en": "Economy pack · Size 4 · 7–14 kg",
+        "ar": "عبوة اقتصادية · مقاس 4 · 7–14 كغم",
+        "group": "Economy pack"
+      },
+      {
+        "src": "/images/2026/07/baby-life-economic-packaging-economic-packaging-5.webp",
+        "en": "Economy pack · Size 5 · 11–18 kg",
+        "ar": "عبوة اقتصادية · مقاس 5 · 11–18 كغم",
+        "group": "Economy pack"
+      },
+      {
+        "src": "/images/2026/07/baby-life-economic-packaging-economic-packaging-6.webp",
+        "en": "Economy pack · Size 6 · 18+ kg",
+        "ar": "عبوة اقتصادية · مقاس 6 · 18+ كغم",
+        "group": "Economy pack"
+      },
+      {
+        "src": "/images/2026/07/baby-life-mini-pack-mini-pack-1.webp",
+        "en": "Mini pack · Size 1 · 2–5 kg",
+        "ar": "عبوة صغيرة · مقاس 1 · 2–5 كغم",
+        "group": "Mini pack"
+      },
+      {
+        "src": "/images/2026/07/baby-life-mini-pack-mini-pack-2.webp",
+        "en": "Mini pack · Size 2 · 3–6 kg",
+        "ar": "عبوة صغيرة · مقاس 2 · 3–6 كغم",
+        "group": "Mini pack"
+      },
+      {
+        "src": "/images/2026/07/baby-life-mini-pack-mini-pack-3.webp",
+        "en": "Mini pack · Size 3 · 4–9 kg",
+        "ar": "عبوة صغيرة · مقاس 3 · 4–9 كغم",
+        "group": "Mini pack"
+      },
+      {
+        "src": "/images/2026/07/baby-life-mini-pack-mini-pack-4.webp",
+        "en": "Mini pack · Size 4 · 7–14 kg",
+        "ar": "عبوة صغيرة · مقاس 4 · 7–14 كغم",
+        "group": "Mini pack"
+      },
+      {
+        "src": "/images/2026/07/baby-life-mini-pack-mini-pack-5.webp",
+        "en": "Mini pack · Size 5 · 11–18 kg",
+        "ar": "عبوة صغيرة · مقاس 5 · 11–18 كغم",
+        "group": "Mini pack"
+      },
+      {
+        "src": "/images/2026/07/baby-life-mini-pack-mini-pack-6.webp",
+        "en": "Mini pack · Size 6 · 18+ kg",
+        "ar": "عبوة صغيرة · مقاس 6 · 18+ كغم",
+        "group": "Mini pack"
+      },
+      {
+        "src": "/images/2026/07/baby-life-mini-pack-mini-pack-7.webp",
+        "en": "Mini pack · Size 7 · 20+ kg",
+        "ar": "عبوة صغيرة · مقاس 7 · 20+ كغم",
+        "group": "Mini pack"
+      }
+    ],
+    "thumb": "/images/2026/07/baby-life-jumbo-packaging-jumbo-packaging-4-1.webp",
+    "thumbAlt": "Baby Life Diapers — Jumbo pack · Size 4 · 7–14 kg",
+    "ranges": [
+      "babylife"
+    ],
+    "seo": {
+      "title": "Baby Life Diapers | Sizes 1–8, Newborn to 4X-Large | Jordan",
+      "desc": {
+        "en": "Baby Life taped diapers in nine sizes from newborn 2–5 kg to 4X-Large 22+ kg, in mini, economy, jumbo, giant and box packs. Made in Amman.",
+        "ar": "حفاضات بيبي لايف اللاصقة بتسعة مقاسات، من حديث الولادة 2–5 كغم إلى 4X كبير 22+ كغم، بعبوات صغيرة واقتصادية وجامبو وعملاقة وكرتونية. تُصنّع في عمّان."
+      },
+      "titleAr": "حفاضات بيبي لايف | المقاسات 1–8، من حديث الولادة إلى 4X كبير"
+    }
+  },
+  {
+    "slug": "baby-life-pants",
+    "order": 102,
+    "title": {
+      "en": "Baby Life Pants",
+      "ar": "بيبي لايف بانتس"
+    },
+    "arabicName": "بيبي لايف بانتس",
+    "body": {
+      "en": "<p class=\"has-large-font-size\">Pull on, pull off. For the stage where lying still for a change is no longer on offer.</p>\n<ul>\n<li><strong>12 hours of dryness</strong> — enough for a full night, or a long day out.</li>\n<li><strong>360° elasticated waist</strong> — pulls up like underwear and moves with a crawling, walking, climbing toddler.</li>\n<li><strong>Easy tear-away sides</strong> — comes off cleanly without laying your child down.</li>\n<li><strong>Soft breathable back sheet</strong> — lets air circulate to help keep skin dry.</li>\n</ul>\n<p>Made at our facility in Al Qastal, Amman.</p>",
+      "ar": "<p class=\"has-large-font-size\">تُلبَس سحباً وتُنزع سحباً. للمرحلة التي لم يعد فيها الاستلقاء بهدوء خياراً مطروحاً.</p>\n<ul>\n<li><strong>جفاف 12 ساعة</strong> — يكفي ليلة كاملة، أو يوماً طويلاً خارج البيت.</li>\n<li><strong>خصر مطاطي 360°</strong> — يُسحب كالملابس الداخلية ويتحرّك مع طفل يحبو ويمشي ويتسلّق.</li>\n<li><strong>جوانب سهلة التمزيق</strong> — تُنزع بسهولة دون الحاجة لإضجاع طفلك.</li>\n<li><strong>طبقة خارجية ناعمة تسمح بمرور الهواء</strong> — تتيح دوران الهواء للمساعدة في إبقاء البشرة جافّة.</li>\n</ul>\n<p>يُصنع في مصنعنا في القسطل بعمّان.</p>"
+    },
+    "count": "Sizes 3–7",
+    "sizes": "Medium to XXXL",
+    "formats": [
+      [
+        "Mini pack",
+        "عبوة صغيرة"
+      ],
+      [
+        "Economy pack",
+        "عبوة اقتصادية"
+      ],
+      [
+        "Jumbo pack",
+        "عبوة جامبو"
+      ],
+      [
+        "Box",
+        "عبوة كرتونية"
+      ]
+    ],
+    "chart": [],
+    "gallery": [
+      {
+        "src": "/images/2026/07/baby-life-pants-jumbo-packaging-jumbo-packaging-3.webp",
+        "en": "Jumbo pack · Size 3 · 4–9 kg",
+        "ar": "عبوة جامبو · مقاس 3 · 4–9 كغم",
+        "group": "Jumbo pack"
+      },
+      {
+        "src": "/images/2026/07/baby-life-pants-jumbo-packaging-jumbo-packaging-4.webp",
+        "en": "Jumbo pack · Size 4 · 7–14 kg",
+        "ar": "عبوة جامبو · مقاس 4 · 7–14 كغم",
+        "group": "Jumbo pack"
+      },
+      {
+        "src": "/images/2026/07/baby-life-pants-jumbo-packaging-jumbo-packaging-5.webp",
+        "en": "Jumbo pack · Size 5 · 11–18 kg",
+        "ar": "عبوة جامبو · مقاس 5 · 11–18 كغم",
+        "group": "Jumbo pack"
+      },
+      {
+        "src": "/images/2026/07/baby-life-pants-jumbo-packaging-jumbo-packaging-6.webp",
+        "en": "Jumbo pack · Size 6 · 18+ kg",
+        "ar": "عبوة جامبو · مقاس 6 · 18+ كغم",
+        "group": "Jumbo pack"
+      },
+      {
+        "src": "/images/2026/07/baby-life-pants-jumbo-packaging-jumbo-packaging-7.webp",
+        "en": "Jumbo pack · Size 7 · 20+ kg",
+        "ar": "عبوة جامبو · مقاس 7 · 20+ كغم",
+        "group": "Jumbo pack"
+      },
+      {
+        "src": "/images/2026/07/baby-life-pants-box-packaging-box-packaging-3.webp",
+        "en": "Box · Size 3 · 4–9 kg",
+        "ar": "عبوة كرتونية · مقاس 3 · 4–9 كغم",
+        "group": "Box"
+      },
+      {
+        "src": "/images/2026/07/baby-life-pants-box-packaging-box-packaging-4-1.webp",
+        "en": "Box · Size 4 · 7–14 kg",
+        "ar": "عبوة كرتونية · مقاس 4 · 7–14 كغم",
+        "group": "Box"
+      },
+      {
+        "src": "/images/2026/07/baby-life-pants-box-packaging-box-packaging-4.webp",
+        "en": "Box · Size 4+ · 10–15 kg",
+        "ar": "عبوة كرتونية · مقاس 4+ · 10–15 كغم",
+        "group": "Box"
+      },
+      {
+        "src": "/images/2026/07/baby-life-pants-box-packaging-box-packaging-5.webp",
+        "en": "Box · Size 5 · 11–18 kg",
+        "ar": "عبوة كرتونية · مقاس 5 · 11–18 كغم",
+        "group": "Box"
+      },
+      {
+        "src": "/images/2026/07/baby-life-pants-box-packaging-box-packaging-6.webp",
+        "en": "Box · Size 6 · 18+ kg",
+        "ar": "عبوة كرتونية · مقاس 6 · 18+ كغم",
+        "group": "Box"
+      },
+      {
+        "src": "/images/2026/07/baby-life-pants-box-packaging-box-packaging-7.webp",
+        "en": "Box · Size 7 · 20+ kg",
+        "ar": "عبوة كرتونية · مقاس 7 · 20+ كغم",
+        "group": "Box"
+      },
+      {
+        "src": "/images/2026/07/baby-life-pants-economic-packaging-economic-packaging-3.webp",
+        "en": "Economy pack · Size 3 · 4–9 kg",
+        "ar": "عبوة اقتصادية · مقاس 3 · 4–9 كغم",
+        "group": "Economy pack"
+      },
+      {
+        "src": "/images/2026/07/baby-life-pants-economic-packaging-economic-packaging-4.webp",
+        "en": "Economy pack · Size 4 · 7–14 kg",
+        "ar": "عبوة اقتصادية · مقاس 4 · 7–14 كغم",
+        "group": "Economy pack"
+      },
+      {
+        "src": "/images/2026/07/baby-life-pants-economic-packaging-economic-packaging-5.webp",
+        "en": "Economy pack · Size 5 · 11–18 kg",
+        "ar": "عبوة اقتصادية · مقاس 5 · 11–18 كغم",
+        "group": "Economy pack"
+      },
+      {
+        "src": "/images/2026/07/baby-life-pants-economic-packaging-economic-packaging-6.webp",
+        "en": "Economy pack · Size 6 · 18+ kg",
+        "ar": "عبوة اقتصادية · مقاس 6 · 18+ كغم",
+        "group": "Economy pack"
+      },
+      {
+        "src": "/images/2026/07/baby-life-pants-mini-pack-mini-pack-3.webp",
+        "en": "Mini pack · Size 3 · 4–9 kg",
+        "ar": "عبوة صغيرة · مقاس 3 · 4–9 كغم",
+        "group": "Mini pack"
+      },
+      {
+        "src": "/images/2026/07/baby-life-pants-mini-pack-mini-pack-4.webp",
+        "en": "Mini pack · Size 4 · 7–14 kg",
+        "ar": "عبوة صغيرة · مقاس 4 · 7–14 كغم",
+        "group": "Mini pack"
+      },
+      {
+        "src": "/images/2026/07/baby-life-pants-mini-pack-mini-pack-5.webp",
+        "en": "Mini pack · Size 5 · 11–18 kg",
+        "ar": "عبوة صغيرة · مقاس 5 · 11–18 كغم",
+        "group": "Mini pack"
+      },
+      {
+        "src": "/images/2026/07/baby-life-pants-mini-pack-mini-pack-6.webp",
+        "en": "Mini pack · Size 6 · 18+ kg",
+        "ar": "عبوة صغيرة · مقاس 6 · 18+ كغم",
+        "group": "Mini pack"
+      },
+      {
+        "src": "/images/2026/07/baby-life-pants-mini-pack-mini-pack-7.webp",
+        "en": "Mini pack · Size 7 · 20+ kg",
+        "ar": "عبوة صغيرة · مقاس 7 · 20+ كغم",
+        "group": "Mini pack"
+      }
+    ],
+    "thumb": "/images/2026/07/baby-life-pants-jumbo-packaging-jumbo-packaging-6.webp",
+    "thumbAlt": "Baby Life Pants — Jumbo pack · Size 6 · 18+ kg",
+    "ranges": [
+      "babylife"
+    ],
+    "seo": {
+      "title": "Baby Life Pants | Pull-Up Diapers Sizes 3–7 | Made in Jordan",
+      "desc": {
+        "en": "Baby Life pull-up pants in sizes 3 to 7, from Medium 4–9 kg to XXXL 20+ kg, with 12 hours of dryness and tear-away sides. Made in Amman.",
+        "ar": "بيبي لايف بانتس بمقاسات من 3 إلى 7، من وسط 4–9 كغم إلى XXXL 20+ كغم، مع جفاف يدوم 12 ساعة وجوانب سهلة التمزيق. تُصنّع في عمّان."
+      },
+      "titleAr": "بيبي لايف بانتس | حفاضات السحب مقاسات 3–7"
+    }
+  },
+  {
+    "slug": "super-active-baby",
+    "order": 103,
+    "title": {
+      "en": "Super Active Baby",
+      "ar": "سوبر أكتيف بيبي"
+    },
+    "arabicName": "سوبر أكتيف بيبي",
+    "body": {
+      "en": "<p class=\"has-large-font-size\">Everyday protection in a jumbo pack, for households that go through a lot of diapers.</p>\n<ul>\n<li><strong>Absorbent core</strong> — holds moisture away from the skin through a long day.</li>\n<li><strong>Secure refastenable tabs</strong> — check the fit and re-close without wasting a diaper.</li>\n<li><strong>Soft on skin</strong> — a gentle liner and breathable back sheet.</li>\n</ul>\n<p>Made in Al Qastal, Amman by Khattab Group.</p>",
+      "ar": "<p class=\"has-large-font-size\">حماية يومية بعبوة جامبو، للبيوت التي تستهلك الكثير من الحفاضات.</p>\n<ul>\n<li><strong>نواة ماصة</strong> — تُبعد الرطوبة عن البشرة طوال يوم طويل.</li>\n<li><strong>لواصق محكمة قابلة لإعادة الإغلاق</strong> — تحقّق من المقاس وأعد الإغلاق دون إهدار حفاض.</li>\n<li><strong>لطيف على البشرة</strong> — طبقة داخلية لطيفة وطبقة خارجية تسمح بمرور الهواء.</li>\n</ul>\n<p>يُصنع في القسطل بعمّان لدى مجموعة الخطاب.</p>"
+    },
+    "count": "Jumbo pack",
+    "sizes": "Sizes 1–6",
+    "formats": [
+      [
+        "Jumbo pack",
+        "عبوة جامبو"
+      ]
+    ],
+    "chart": [],
+    "gallery": [
+      {
+        "src": "/images/2026/07/super-active-baby-super-active-baby-jumbo-packaging-jumbo-packaging-1-2.webp",
+        "en": "Jumbo pack · Sizes 1–2 · 2–6 kg",
+        "ar": "عبوة جامبو · مقاس 1–2 · 2–6 كغم",
+        "group": ""
+      },
+      {
+        "src": "/images/2026/07/super-active-baby-super-active-baby-jumbo-packaging-jumbo-packaging-3.webp",
+        "en": "Jumbo pack · Size 3 · 4–9 kg",
+        "ar": "عبوة جامبو · مقاس 3 · 4–9 كغم",
+        "group": ""
+      },
+      {
+        "src": "/images/2026/07/super-active-baby-super-active-baby-jumbo-packaging-jumbo-packaging-4.webp",
+        "en": "Jumbo pack · Size 4 · 7–14 kg",
+        "ar": "عبوة جامبو · مقاس 4 · 7–14 كغم",
+        "group": ""
+      },
+      {
+        "src": "/images/2026/07/super-active-baby-super-active-baby-jumbo-packaging-jumbo-packaging-5.webp",
+        "en": "Jumbo pack · Size 5 · 11–18 kg",
+        "ar": "عبوة جامبو · مقاس 5 · 11–18 كغم",
+        "group": ""
+      },
+      {
+        "src": "/images/2026/07/super-active-baby-super-active-baby-jumbo-packaging-jumbo-packaging-6.webp",
+        "en": "Jumbo pack · Size 6 · 18+ kg",
+        "ar": "عبوة جامبو · مقاس 6 · 18+ كغم",
+        "group": ""
+      }
+    ],
+    "thumb": "/images/2026/07/super-active-baby-super-active-baby-jumbo-packaging-jumbo-packaging-4.webp",
+    "thumbAlt": "Super Active Baby — Jumbo pack · Size 4 · 7–14 kg",
+    "ranges": [
+      "babylife"
+    ],
+    "seo": {
+      "title": "Super Active Baby Diapers | Jumbo Packs | Baby Life Jordan",
+      "desc": {
+        "en": "Super Active Baby taped diapers in jumbo packs, sized from newborn through to XXL. Manufactured in Al Qastal, Amman by Khattab Group.",
+        "ar": "حفاضات سوبر أكتيف بيبي اللاصقة بعبوات جامبو، بمقاسات من حديث الولادة حتى XXL. تُصنّع في القسطل بعمّان لدى مجموعة الخطاب."
+      },
+      "titleAr": "حفاضات سوبر أكتيف بيبي | عبوات جامبو"
+    }
+  },
+  {
+    "slug": "baby-life-wipes",
+    "order": 104,
+    "title": {
+      "en": "Baby Life Wipes",
+      "ar": "مناديل بيبي لايف المبللة"
+    },
+    "arabicName": "مناديل بيبي لايف المبللة",
+    "body": {
+      "en": "<p class=\"has-large-font-size\">Ninety wipes to a pack, for the changing bag and the changing table.</p>\n<ul>\n<li><strong>Thick and soft</strong> — a substantial wipe that does the job in one pass.</li>\n<li><strong>Gentle formulation</strong> — made for a newborn&#8217;s skin.</li>\n<li><strong>Resealable lid</strong> — keeps the pack moist down to the last wipe.</li>\n</ul>",
+      "ar": "<p class=\"has-large-font-size\">تسعون منديلاً في العبوة، لحقيبة التغيير ولطاولة التغيير.</p>\n<ul>\n<li><strong>سميكة وناعمة</strong> — منديل متين يؤدي المهمة من مسحة واحدة.</li>\n<li><strong>تركيبة لطيفة</strong> — مصنوعة لبشرة المولود.</li>\n<li><strong>غطاء قابل لإعادة الإغلاق</strong> — يحافظ على رطوبة العبوة حتى آخر منديل.</li>\n</ul>"
+    },
+    "count": "90 wipes",
+    "sizes": "",
+    "formats": [
+      [
+        "90 wipes per pack",
+        "90 منديلاً في العبوة"
+      ]
+    ],
+    "chart": [],
+    "gallery": [
+      {
+        "src": "/images/2026/07/baby-life-90-wipes-baby-life-90-wipes.webp",
+        "en": "90 wipes",
+        "ar": "90 منديلاً",
+        "group": ""
+      },
+      {
+        "src": "/images/2026/07/baby-life-90-wipes-4-baby-life-90-wipes-1.webp",
+        "en": "90 wipes · yellow",
+        "ar": "90 منديلاً · أصفر",
+        "group": ""
+      },
+      {
+        "src": "/images/2026/07/baby-life-90-wipes-4-baby-life-90-wipes-2.webp",
+        "en": "90 wipes · green",
+        "ar": "90 منديلاً · أخضر",
+        "group": ""
+      },
+      {
+        "src": "/images/2026/07/baby-life-90-wipes-4-baby-life-90-wipes-3.webp",
+        "en": "90 wipes · blue",
+        "ar": "90 منديلاً · أزرق",
+        "group": ""
+      },
+      {
+        "src": "/images/2026/07/baby-life-90-wipes-4-baby-life-90-wipes-4.webp",
+        "en": "90 wipes · pink",
+        "ar": "90 منديلاً · وردي",
+        "group": ""
+      }
+    ],
+    "thumb": "/images/2026/07/baby-life-90-wipes-4-baby-life-90-wipes-2.webp",
+    "thumbAlt": "Baby Life Wipes — 90 wipes · green",
+    "ranges": [
+      "babylife"
+    ],
+    "seo": {
+      "title": "Baby Life Baby Wipes | 90 per Pack | Made in Jordan",
+      "desc": {
+        "en": "Baby Life baby wipes, 90 to a resealable pack — thick, soft and gentle enough for a newborn. Manufactured in Amman by Khattab Group.",
+        "ar": "مناديل بيبي لايف المبللة، 90 منديلاً في عبوة قابلة لإعادة الإغلاق — سميكة وناعمة ولطيفة على بشرة المولود. تُصنّع في عمّان."
+      },
+      "titleAr": "مناديل بيبي لايف المبللة | 90 منديلاً في العبوة"
+    }
+  },
+  {
+    "slug": "life-kids-wipes",
+    "order": 105,
+    "title": {
+      "en": "Life Kids Wipes",
+      "ar": "مناديل لايف كيدز"
+    },
+    "arabicName": "مناديل لايف كيدز",
+    "body": {
+      "en": "<p class=\"has-large-font-size\">A pocket pack of fifteen, alcohol free — for hands and faces between the car and the table.</p>\n<ul>\n<li><strong>Alcohol free</strong> — no sting, safe for faces and hands.</li>\n<li><strong>Travel size</strong> — fits a pocket, a handbag or a school bag.</li>\n</ul>",
+      "ar": "<p class=\"has-large-font-size\">عبوة جيب من خمسة عشر منديلاً، خالية من الكحول — لليدين والوجه بين السيارة والطاولة.</p>\n<ul>\n<li><strong>خالية من الكحول</strong> — لا تسبّب لسعاً، وآمنة للوجه واليدين.</li>\n<li><strong>حجم السفر</strong> — تتّسع لها الجيب أو حقيبة اليد أو الحقيبة المدرسية.</li>\n</ul>"
+    },
+    "count": "15 wipes",
+    "sizes": "",
+    "formats": [
+      [
+        "15 wipes, travel pack",
+        "15 منديلاً، عبوة سفر"
+      ]
+    ],
+    "chart": [],
+    "gallery": [
+      {
+        "src": "/images/2026/07/life-kids-15-wipes-alcohol-free-life-kids-15-wipes-alcohol-free-1.webp",
+        "en": "life kids - 15 Wipes-Alcohol Free 1",
+        "ar": "life kids - 15 Wipes-Alcohol Free 1",
+        "group": ""
+      },
+      {
+        "src": "/images/2026/07/life-kids-15-wipes-alcohol-free-life-kids-15-wipes-alcohol-free-2.webp",
+        "en": "life kids - 15 Wipes-Alcohol Free 2",
+        "ar": "life kids - 15 Wipes-Alcohol Free 2",
+        "group": ""
+      },
+      {
+        "src": "/images/2026/07/life-kids-15-wipes-alcohol-free-life-kids-15-wipes-alcohol-free-3.webp",
+        "en": "life kids - 15 Wipes-Alcohol Free 3",
+        "ar": "life kids - 15 Wipes-Alcohol Free 3",
+        "group": ""
+      },
+      {
+        "src": "/images/2026/07/life-kids-15-wipes-alcohol-free-life-kids-15-wipes-alcohol-free-4.webp",
+        "en": "life kids - 15 Wipes-Alcohol Free 4",
+        "ar": "life kids - 15 Wipes-Alcohol Free 4",
+        "group": ""
+      },
+      {
+        "src": "/images/2026/07/life-kids-15-wipes-alcohol-free-life-kids-15-wipes-alcohol-free-5.webp",
+        "en": "life kids - 15 Wipes-Alcohol Free 5",
+        "ar": "life kids - 15 Wipes-Alcohol Free 5",
+        "group": ""
+      }
+    ],
+    "thumb": "/images/2026/07/life-kids-15-wipes-alcohol-free-life-kids-15-wipes-alcohol-free-3.webp",
+    "thumbAlt": "Life Kids Wipes — life kids - 15 Wipes-Alcohol Free 3",
+    "ranges": [
+      "babylife"
+    ],
+    "seo": {
+      "title": "Life Kids Wipes | 15-Wipe Alcohol-Free Travel Pack",
+      "desc": {
+        "en": "Life Kids alcohol-free wipes in a 15-wipe pocket pack — for hands and faces on the go. Made in Amman, Jordan by Khattab Group.",
+        "ar": "مناديل لايف كيدز الخالية من الكحول بعبوة جيب من 15 منديلاً — لليدين والوجه أثناء التنقل. تُصنّع في عمّان، الأردن."
+      },
+      "titleAr": "مناديل لايف كيدز | عبوة سفر 15 منديلاً خالية من الكحول"
+    }
+  },
+  {
+    "slug": "lady-life-large-wings",
+    "order": 201,
+    "title": {
+      "en": "Lady Life Large with Wings",
+      "ar": "ليدي لايف كبير بالأجنحة"
+    },
+    "arabicName": "ليدي لايف كبير بالأجنحة",
+    "body": {
+      "en": "<p class=\"has-large-font-size\">Silk softness, large with wings — from a 10-pad packet to a 100-pad family pack.</p>\n<ul>\n<li><strong>Silk-soft top sheet</strong> — a smooth surface that stays comfortable through a full day&#8217;s wear.</li>\n<li><strong>Wings</strong> — hold the pad in place and protect the sides.</li>\n<li><strong>Secure adhesive</strong> — keeps its position without bunching or shifting.</li>\n</ul>\n<p>Manufactured in Amman by Khattab Group.</p>",
+      "ar": "<p class=\"has-large-font-size\">نعومة الحرير، كبيرة بالأجنحة — من عبوة 10 فوط إلى عبوة عائلية من 100 فوطة.</p>\n<ul>\n<li><strong>سطح ناعم كالحرير</strong> — سطح أملس يبقى مريحاً طوال اليوم.</li>\n<li><strong>أجنحة</strong> — تثبّت الفوطة في مكانها وتحمي الجانبين.</li>\n<li><strong>لاصق محكم</strong> — يحافظ على موضعها دون تجعّد أو انزلاق.</li>\n</ul>\n<p>تُصنّع في عمّان لدى مجموعة الخطاب.</p>"
+    },
+    "count": "10 to 100 pads",
+    "sizes": "Large with wings",
+    "formats": [
+      [
+        "10 pads",
+        "10 فوط"
+      ],
+      [
+        "Double packet · 20",
+        "عبوة مضاعفة · 20"
+      ],
+      [
+        "Economy pack · 40",
+        "عبوة اقتصادية · 40"
+      ],
+      [
+        "Family pack · 100",
+        "عبوة عائلية · 100"
+      ]
+    ],
+    "chart": [],
+    "gallery": [
+      {
+        "src": "/images/2026/07/lady-life-lady-life-large-wings-lady-life-large-wings-10.webp",
+        "en": "10 pads",
+        "ar": "10 فوط",
+        "group": ""
+      },
+      {
+        "src": "/images/2026/07/lady-life-lady-life-large-wings-lady-life-large-wings-20.webp",
+        "en": "Double packet · 20 pads",
+        "ar": "عبوة مضاعفة · 20 فوطة",
+        "group": ""
+      },
+      {
+        "src": "/images/2026/07/lady-life-lady-life-large-wings-lady-life-large-wings-30-10.webp",
+        "en": "Economy pack · 40 pads",
+        "ar": "العبوة الاقتصادية · 40 فوطة",
+        "group": ""
+      },
+      {
+        "src": "/images/2026/07/lady-life-lady-life-large-wings-lady-life-large-wings-40.webp",
+        "en": "Box · 40 pads (20×2)",
+        "ar": "عبوة كرتونية · 40 فوطة",
+        "group": ""
+      },
+      {
+        "src": "/images/2026/07/lady-life-lady-life-large-wings-lady-life-large-wings-80-20.webp",
+        "en": "Family pack · 100 pads",
+        "ar": "عبوة عائلية · 100 فوطة",
+        "group": ""
+      }
+    ],
+    "thumb": "/images/2026/07/lady-life-lady-life-large-wings-lady-life-large-wings-30-10.webp",
+    "thumbAlt": "Lady Life Large with Wings — Economy pack · 40 pads",
+    "ranges": [
+      "ladylife"
+    ],
+    "seo": {
+      "title": "Lady Life Large Sanitary Pads with Wings | 10 to 100 Packs",
+      "desc": {
+        "en": "Lady Life large sanitary pads with wings, in packs from 10 up to a 100-pad family pack. Silk-soft top sheet. Made in Amman, Jordan.",
+        "ar": "فوط ليدي لايف الصحية الكبيرة بالأجنحة، بعبوات من 10 فوط حتى العبوة العائلية 100 فوطة، بسطح ناعم كالحرير. تُصنّع في عمّان."
+      },
+      "titleAr": "ليدي لايف فوط كبيرة بالأجنحة | عبوات من 10 إلى 100"
+    }
+  },
+  {
+    "slug": "lady-life-maxi-night",
+    "order": 202,
+    "title": {
+      "en": "Lady Life Maxi Night Use",
+      "ar": "ليدي لايف ماكسي للاستخدام الليلي"
+    },
+    "arabicName": "ليدي لايف ماكسي للاستخدام الليلي",
+    "body": {
+      "en": "<p class=\"has-large-font-size\">Longer, wider and made for lying down — night protection with double wings.</p>\n<ul>\n<li><strong>Maxi length</strong> — extended front and back coverage for overnight wear.</li>\n<li><strong>Double wings</strong> — extra hold where a single wing would shift.</li>\n<li><strong>High absorbency core</strong> — designed for the heaviest nights.</li>\n</ul>\n<p>Manufactured in Amman by Khattab Group.</p>",
+      "ar": "<p class=\"has-large-font-size\">أطول وأعرض ومصمّمة للاستلقاء — حماية ليلية بأجنحة مزدوجة.</p>\n<ul>\n<li><strong>طول ماكسي</strong> — تغطية ممتدة من الأمام والخلف للاستخدام الليلي.</li>\n<li><strong>أجنحة مزدوجة</strong> — ثبات إضافي حيث لا يكفي الجناح الواحد.</li>\n<li><strong>نواة عالية الامتصاص</strong> — مصمّمة لأكثر الليالي غزارة.</li>\n</ul>\n<p>تُصنّع في عمّان لدى مجموعة الخطاب.</p>"
+    },
+    "count": "10 to 80 pads",
+    "sizes": "Maxi, double wings",
+    "formats": [
+      [
+        "10 pads",
+        "10 فوط"
+      ],
+      [
+        "Double packet · 20",
+        "عبوة مضاعفة · 20"
+      ],
+      [
+        "Economy pack · 40",
+        "عبوة اقتصادية · 40"
+      ],
+      [
+        "Family pack · 80",
+        "عبوة عائلية · 80"
+      ]
+    ],
+    "chart": [],
+    "gallery": [
+      {
+        "src": "/images/2026/07/lady-life-maxi-night-use-double-wings-maxi-night-use-double-wings-10.webp",
+        "en": "10 pads",
+        "ar": "10 فوط",
+        "group": ""
+      },
+      {
+        "src": "/images/2026/07/lady-life-maxi-night-use-double-wings-maxi-night-use-double-wings-20.webp",
+        "en": "Double packet · 20 pads",
+        "ar": "عبوة مضاعفة · 20 فوطة",
+        "group": ""
+      },
+      {
+        "src": "/images/2026/07/lady-life-maxi-night-use-double-wings-maxi-night-use-double-wings-30-10.webp",
+        "en": "Economy pack · 40 pads",
+        "ar": "العبوة الاقتصادية · 40 فوطة",
+        "group": ""
+      },
+      {
+        "src": "/images/2026/07/lady-life-maxi-night-use-double-wings-maxi-night-use-double-wings-40.webp",
+        "en": "Box · 40 pads",
+        "ar": "عبوة كرتونية · 40 فوطة",
+        "group": ""
+      },
+      {
+        "src": "/images/2026/07/lady-life-maxi-night-use-double-wings-maxi-night-use-double-wings-60-20.webp",
+        "en": "Family pack · 80 pads",
+        "ar": "عبوة عائلية · 80 فوطة",
+        "group": ""
+      }
+    ],
+    "thumb": "/images/2026/07/lady-life-maxi-night-use-double-wings-maxi-night-use-double-wings-30-10.webp",
+    "thumbAlt": "Lady Life Maxi Night Use — Economy pack · 40 pads",
+    "ranges": [
+      "ladylife"
+    ],
+    "seo": {
+      "title": "Lady Life Maxi Night Pads, Double Wings | Made in Jordan",
+      "desc": {
+        "en": "Lady Life maxi night-use sanitary pads with double wings — extended coverage and high absorbency for overnight wear. Made in Amman.",
+        "ar": "فوط ليدي لايف ماكسي للاستخدام الليلي بأجنحة مزدوجة — تغطية ممتدة وامتصاص عالٍ طوال الليل. تُصنّع في عمّان."
+      },
+      "titleAr": "ليدي لايف ماكسي للاستخدام الليلي بأجنحة مزدوجة"
+    }
+  },
+  {
+    "slug": "lady-life-everyday",
+    "order": 203,
+    "title": {
+      "en": "Lady Life Everyday",
+      "ar": "ليدي لايف اليومية"
+    },
+    "arabicName": "ليدي لايف اليومية",
+    "body": {
+      "en": "<p class=\"has-large-font-size\">Every day is not the same day. The rest of the range covers the lighter ones and the heavier ones.</p>\n<ul>\n<li><strong>Compact with wings</strong> — folds small enough for a pocket, still holds its place.</li>\n<li><strong>Normal flat</strong> — the everyday pad, in 20 and 30 packs, with or without wings.</li>\n<li><strong>Maxi Plus</strong> — the longest and most absorbent in the everyday range.</li>\n</ul>\n<p>Manufactured in Amman by Khattab Group.</p>",
+      "ar": "<p class=\"has-large-font-size\">ليست كل الأيام متشابهة. وبقيّة التشكيلة تغطّي الأخفّ منها والأغزر.</p>\n<ul>\n<li><strong>مدمجة بالأجنحة</strong> — تُطوى صغيرة بما يكفي للجيب، وتبقى ثابتة في مكانها.</li>\n<li><strong>عادية مسطّحة</strong> — فوطة كل يوم، بعبوات 20 و30، بأجنحة أو بدونها.</li>\n<li><strong>ماكسي بلس</strong> — الأطول والأعلى امتصاصاً في التشكيلة اليومية.</li>\n</ul>\n<p>تُصنّع في عمّان لدى مجموعة الخطاب.</p>"
+    },
+    "count": "Compact, flat & maxi",
+    "sizes": "Regular to maxi plus",
+    "formats": [
+      [
+        "Compact with wings",
+        "مدمجة بالأجنحة"
+      ],
+      [
+        "Normal flat",
+        "عادية مسطّحة"
+      ],
+      [
+        "Regular & double wings",
+        "أجنحة عادية ومزدوجة"
+      ],
+      [
+        "Maxi Plus",
+        "ماكسي بلس"
+      ]
+    ],
+    "chart": [],
+    "gallery": [
+      {
+        "src": "/images/2026/07/lady-life-lady-life-random-compact-with-wings.webp",
+        "en": "Compact with wings",
+        "ar": "مدمجة بالأجنحة",
+        "group": ""
+      },
+      {
+        "src": "/images/2026/07/lady-life-lady-life-random-maxi-plus.webp",
+        "en": "Maxi Plus",
+        "ar": "ماكسي بلس",
+        "group": ""
+      },
+      {
+        "src": "/images/2026/07/lady-life-lady-life-random-maxi-wings-night-use.webp",
+        "en": "Maxi wings · night use",
+        "ar": "ماكسي بالأجنحة · للليل",
+        "group": ""
+      },
+      {
+        "src": "/images/2026/07/lady-life-lady-life-random-normal-flat-20.webp",
+        "en": "Normal flat · 20 pads",
+        "ar": "عادية مسطّحة · 20 فوطة",
+        "group": ""
+      },
+      {
+        "src": "/images/2026/07/lady-life-lady-life-random-normal-flat-30.webp",
+        "en": "Normal flat · 30 pads",
+        "ar": "عادية مسطّحة · 30 فوطة",
+        "group": ""
+      },
+      {
+        "src": "/images/2026/07/lady-life-lady-life-random-normal-flat-double-wings-1.webp",
+        "en": "Normal flat · double wings",
+        "ar": "عادية مسطّحة · أجنحة مزدوجة",
+        "group": ""
+      },
+      {
+        "src": "/images/2026/07/lady-life-lady-life-random-normal-flat-double-wings-2.webp",
+        "en": "Normal flat · double wings",
+        "ar": "عادية مسطّحة · أجنحة مزدوجة",
+        "group": ""
+      },
+      {
+        "src": "/images/2026/07/lady-life-lady-life-random-normal-flat-regular-wings.webp",
+        "en": "Normal flat · regular wings",
+        "ar": "عادية مسطّحة · أجنحة عادية",
+        "group": ""
+      }
+    ],
+    "thumb": "/images/2026/07/lady-life-lady-life-random-normal-flat-20.webp",
+    "thumbAlt": "Lady Life Everyday — Normal flat · 20 pads",
+    "ranges": [
+      "ladylife"
+    ],
+    "seo": {
+      "title": "Lady Life Everyday Pads | Compact, Flat & Maxi Plus",
+      "desc": {
+        "en": "The everyday Lady Life range — compact with wings, normal flat in 20 and 30 packs, regular and double wings, and Maxi Plus. Made in Jordan.",
+        "ar": "تشكيلة ليدي لايف اليومية — مدمجة بالأجنحة، وعادية مسطّحة بعبوات 20 و30، وأجنحة عادية ومزدوجة، وماكسي بلس. صنع في الأردن."
+      },
+      "titleAr": "ليدي لايف اليومية | مدمجة ومسطّحة وماكسي بلس"
+    }
+  },
+  {
+    "slug": "lifey-thick",
+    "order": 204,
+    "title": {
+      "en": "Lifey Thick",
+      "ar": "لايفي السميكة"
+    },
+    "arabicName": "لايفي السميكة",
+    "body": {
+      "en": "<p class=\"has-large-font-size\">Three absorbencies, one range — pick the pad for the day rather than the other way round.</p>\n<ul>\n<li><strong>Regular thick</strong> — for light flow, in 10 and 40 packs.</li>\n<li><strong>Super thick</strong> — for moderate flow, in 9 and 36 packs.</li>\n<li><strong>Night thick</strong> — for heavy flow, in 8 and 32 packs.</li>\n</ul>\n<p>Manufactured in Amman by Khattab Group.</p>",
+      "ar": "<p class=\"has-large-font-size\">ثلاث درجات امتصاص في تشكيلة واحدة — اختاري الفوطة المناسبة ليومك، لا العكس.</p>\n<ul>\n<li><strong>سماكة عادية</strong> — للتدفّق الخفيف، بعبوات 10 و40.</li>\n<li><strong>فائقة السماكة</strong> — للتدفّق المتوسط، بعبوات 9 و36.</li>\n<li><strong>سميكة ليلية</strong> — للتدفّق الغزير، بعبوات 8 و32.</li>\n</ul>\n<p>تُصنّع في عمّان لدى مجموعة الخطاب.</p>"
+    },
+    "count": "8 to 40 pads",
+    "sizes": "Regular · Super · Night",
+    "formats": [
+      [
+        "Regular · light flow",
+        "عادية · تدفّق خفيف"
+      ],
+      [
+        "Super · moderate flow",
+        "فائقة · تدفّق متوسط"
+      ],
+      [
+        "Night · heavy flow",
+        "ليلية · تدفّق غزير"
+      ]
+    ],
+    "chart": [],
+    "gallery": [
+      {
+        "src": "/images/2026/07/lifey-lifey-thick-lifey-thick-8.webp",
+        "en": "Night thick · heavy flow · 8 pads",
+        "ar": "سميكة ليلية · تدفّق غزير · 8 فوط",
+        "group": ""
+      },
+      {
+        "src": "/images/2026/07/lifey-lifey-thick-lifey-thick-9.webp",
+        "en": "Super thick · moderate flow · 9 pads",
+        "ar": "فائقة السماكة · تدفّق متوسط · 9 فوط",
+        "group": ""
+      },
+      {
+        "src": "/images/2026/07/lifey-lifey-thick-lifey-thick-10.webp",
+        "en": "Regular thick · light flow · 10 pads",
+        "ar": "سماكة عادية · تدفّق خفيف · 10 فوط",
+        "group": ""
+      },
+      {
+        "src": "/images/2026/07/lifey-lifey-thick-lifey-thick-32.webp",
+        "en": "Night thick · heavy flow · 32 pads",
+        "ar": "سميكة ليلية · تدفّق غزير · 32 فوطة",
+        "group": ""
+      },
+      {
+        "src": "/images/2026/07/lifey-lifey-thick-lifey-thick-36.webp",
+        "en": "Super thick · moderate flow · 36 pads",
+        "ar": "فائقة السماكة · تدفّق متوسط · 36 فوطة",
+        "group": ""
+      },
+      {
+        "src": "/images/2026/07/lifey-lifey-thick-lifey-thick-40.webp",
+        "en": "Regular thick · light flow · 40 pads",
+        "ar": "سماكة عادية · تدفّق خفيف · 40 فوطة",
+        "group": ""
+      }
+    ],
+    "thumb": "/images/2026/07/lifey-lifey-thick-lifey-thick-32.webp",
+    "thumbAlt": "Lifey Thick — Night thick · heavy flow · 32 pads",
+    "ranges": [
+      "ladylife"
+    ],
+    "seo": {
+      "title": "Lifey Thick Sanitary Pads | Regular, Super & Night | Jordan",
+      "desc": {
+        "en": "Lifey thick sanitary pads in three absorbencies — regular for light flow, super for moderate, night for heavy — from 8 to 40 per pack.",
+        "ar": "فوط لايفي السميكة بثلاث درجات امتصاص — عادية للتدفّق الخفيف، وفائقة للمتوسط، وليلية للغزير — من 8 إلى 40 فوطة في العبوة."
+      },
+      "titleAr": "فوط لايفي السميكة | عادية وفائقة وليلية"
+    }
+  },
+  {
+    "slug": "lifey-thin",
+    "order": 205,
+    "title": {
+      "en": "Lifey Thin",
+      "ar": "لايفي الرفيعة"
+    },
+    "arabicName": "لايفي الرفيعة",
+    "body": {
+      "en": "<p class=\"has-large-font-size\">The same three absorbencies, in a slimmer pad that disappears under clothing.</p>\n<ul>\n<li><strong>Regular thin</strong> — for light flow, in 10 and 40 packs.</li>\n<li><strong>Super thin</strong> — for moderate flow, in 9 and 36 packs.</li>\n<li><strong>Night thin</strong> — for heavy flow, in 8 and 32 packs.</li>\n</ul>\n<p>Manufactured in Amman by Khattab Group.</p>",
+      "ar": "<p class=\"has-large-font-size\">درجات الامتصاص الثلاث نفسها، بفوطة أنحف لا تُلحظ تحت الملابس.</p>\n<ul>\n<li><strong>رفيعة عادية</strong> — للتدفّق الخفيف، بعبوات 10 و40.</li>\n<li><strong>رفيعة فائقة</strong> — للتدفّق المتوسط، بعبوات 9 و36.</li>\n<li><strong>رفيعة ليلية</strong> — للتدفّق الغزير، بعبوات 8 و32.</li>\n</ul>\n<p>تُصنّع في عمّان لدى مجموعة الخطاب.</p>"
+    },
+    "count": "8 to 40 pads",
+    "sizes": "Regular · Super · Night",
+    "formats": [
+      [
+        "Regular · light flow",
+        "عادية · تدفّق خفيف"
+      ],
+      [
+        "Super · moderate flow",
+        "فائقة · تدفّق متوسط"
+      ],
+      [
+        "Night · heavy flow",
+        "ليلية · تدفّق غزير"
+      ]
+    ],
+    "chart": [],
+    "gallery": [
+      {
+        "src": "/images/2026/07/lifey-lifey-thin-lifey-thin-8.webp",
+        "en": "Night thick · heavy flow · 8 pads",
+        "ar": "سميكة ليلية · تدفّق غزير · 8 فوط",
+        "group": ""
+      },
+      {
+        "src": "/images/2026/07/lifey-lifey-thin-lifey-thin-9.webp",
+        "en": "Super thick · moderate flow · 9 pads",
+        "ar": "فائقة السماكة · تدفّق متوسط · 9 فوط",
+        "group": ""
+      },
+      {
+        "src": "/images/2026/07/lifey-lifey-thin-lifey-thin-10.webp",
+        "en": "Regular thick · light flow · 10 pads",
+        "ar": "سماكة عادية · تدفّق خفيف · 10 فوط",
+        "group": ""
+      },
+      {
+        "src": "/images/2026/07/lifey-lifey-thin-lifey-thin-32.webp",
+        "en": "Night thick · heavy flow · 32 pads",
+        "ar": "سميكة ليلية · تدفّق غزير · 32 فوطة",
+        "group": ""
+      },
+      {
+        "src": "/images/2026/07/lifey-lifey-thin-lifey-thin-36.webp",
+        "en": "Super thick · moderate flow · 36 pads",
+        "ar": "فائقة السماكة · تدفّق متوسط · 36 فوطة",
+        "group": ""
+      },
+      {
+        "src": "/images/2026/07/lifey-lifey-thin-lifey-thin-40.webp",
+        "en": "Regular thick · light flow · 40 pads",
+        "ar": "سماكة عادية · تدفّق خفيف · 40 فوطة",
+        "group": ""
+      }
+    ],
+    "thumb": "/images/2026/07/lifey-lifey-thin-lifey-thin-32.webp",
+    "thumbAlt": "Lifey Thin — Night thick · heavy flow · 32 pads",
+    "ranges": [
+      "ladylife"
+    ],
+    "seo": {
+      "title": "Lifey Thin Sanitary Pads | Regular, Super & Night | Jordan",
+      "desc": {
+        "en": "Lifey thin sanitary pads in three absorbencies — the same protection in a slimmer pad that disappears under clothing. 8 to 40 per pack.",
+        "ar": "فوط لايفي الرفيعة بثلاث درجات امتصاص — الحماية نفسها بفوطة أنحف لا تُلحظ تحت الملابس. من 8 إلى 40 فوطة في العبوة."
+      },
+      "titleAr": "فوط لايفي الرفيعة | عادية وفائقة وليلية"
+    }
+  },
+  {
+    "slug": "life-lady-baby",
+    "order": 206,
+    "title": {
+      "en": "Life Lady & Baby",
+      "ar": "لايف ليدي آند بيبي"
+    },
+    "arabicName": "لايف ليدي آند بيبي",
+    "body": {
+      "en": "<p class=\"has-large-font-size\">Made for the weeks after birth, when the everyday pad is not enough.</p>\n<ul>\n<li><strong>Extra length and absorbency</strong> — maternity coverage, thirty to a pack.</li>\n<li><strong>Soft top sheet</strong> — chosen for skin that needs gentleness right now.</li>\n</ul>\n<p>Manufactured in Amman by Khattab Group.</p>",
+      "ar": "<p class=\"has-large-font-size\">مصمّمة للأسابيع التي تلي الولادة، حين لا تكفي الفوطة اليومية.</p>\n<ul>\n<li><strong>طول وامتصاص إضافيان</strong> — تغطية النفاس، ثلاثون فوطة في العبوة.</li>\n<li><strong>سطح ناعم</strong> — مختار لبشرة تحتاج إلى اللطف في هذه المرحلة.</li>\n</ul>\n<p>تُصنّع في عمّان لدى مجموعة الخطاب.</p>"
+    },
+    "count": "30 pads",
+    "sizes": "",
+    "formats": [
+      [
+        "30 pads",
+        "30 فوطة"
+      ]
+    ],
+    "chart": [],
+    "gallery": [
+      {
+        "src": "/images/2026/07/life-lady-baby-life-lady-baby-30.webp",
+        "en": "30 maternity pads",
+        "ar": "30 فوطة للنفاس",
+        "group": ""
+      }
+    ],
+    "thumb": "/images/2026/07/life-lady-baby-life-lady-baby-30.webp",
+    "thumbAlt": "Life Lady & Baby — 30 maternity pads",
+    "ranges": [
+      "ladylife"
+    ],
+    "seo": {
+      "title": "Life Lady & Baby Maternity Pads | 30 per Pack",
+      "desc": {
+        "en": "Life Lady & Baby maternity pads, 30 to a pack — extra length and absorbency for the weeks after birth. Made in Amman, Jordan.",
+        "ar": "فوط لايف ليدي آند بيبي للنفاس، 30 فوطة في العبوة — طول وامتصاص إضافيان للأسابيع التي تلي الولادة. تُصنّع في عمّان."
+      },
+      "titleAr": "لايف ليدي آند بيبي فوط النفاس | 30 فوطة"
+    }
+  },
+  {
+    "slug": "life-adult-briefs",
+    "order": 301,
+    "title": {
+      "en": "Life Adult Briefs",
+      "ar": "لايف حفاضات البالغين"
+    },
+    "arabicName": "لايف حفاضات البالغين",
+    "body": {
+      "en": "<p class=\"has-large-font-size\">Dignity first. Five sizes, a soft cloth-like cover and absorbency that holds through the night.</p>\n<ul>\n<li><strong>Cloth-like cover</strong> — quiet and soft against the skin, not plastic.</li>\n<li><strong>Refastenable tabs</strong> — adjust the fit and re-close without replacing the brief.</li>\n<li><strong>Wetness indicator</strong> — shows when a change is needed, so checks are discreet.</li>\n<li><strong>Leak guards</strong> — standing cuffs at the legs.</li>\n</ul>\n<p>Manufactured in Amman by Khattab Group.</p>",
+      "ar": "<p class=\"has-large-font-size\">الكرامة أولاً. خمسة مقاسات، وغطاء ناعم يشبه القماش، وامتصاص يدوم طوال الليل.</p>\n<ul>\n<li><strong>غطاء يشبه القماش</strong> — هادئ وناعم على البشرة، وليس بلاستيكياً.</li>\n<li><strong>لواصق قابلة لإعادة الإغلاق</strong> — عدّل المقاس وأعد الإغلاق دون استبدال الحفاض.</li>\n<li><strong>مؤشر البلل</strong> — يبيّن الحاجة إلى التغيير، فيبقى التحقّق أمراً غير محرج.</li>\n<li><strong>حواجز التسرّب</strong> — أطراف قائمة عند الساقين.</li>\n</ul>\n<p>تُصنّع في عمّان لدى مجموعة الخطاب.</p>"
+    },
+    "count": "8 to 16 per pack",
+    "sizes": "Small to XXL",
+    "formats": [
+      [
+        "Five sizes, S to XXL",
+        "خمسة مقاسات، من S إلى XXL"
+      ]
+    ],
+    "chart": [
+      {
+        "size": "S",
+        "name_en": "Small",
+        "name_ar": "صغير",
+        "wt_en": "",
+        "wt_ar": "",
+        "count": 16
+      },
+      {
+        "size": "M",
+        "name_en": "Medium",
+        "name_ar": "وسط",
+        "wt_en": "",
+        "wt_ar": "",
+        "count": 14
+      },
+      {
+        "size": "L",
+        "name_en": "Large",
+        "name_ar": "كبير",
+        "wt_en": "",
+        "wt_ar": "",
+        "count": 12
+      },
+      {
+        "size": "XL",
+        "name_en": "X-Large",
+        "name_ar": "كبير جداً",
+        "wt_en": "",
+        "wt_ar": "",
+        "count": 10
+      },
+      {
+        "size": "XXL",
+        "name_en": "XX-Large",
+        "name_ar": "كبير جداً جداً",
+        "wt_en": "",
+        "wt_ar": "",
+        "count": 8
+      }
+    ],
+    "gallery": [
+      {
+        "src": "/images/2026/07/life-adult-briefs-new-improved-new-improved-8.webp",
+        "en": "XXL · 8 briefs",
+        "ar": "XXL · 8 حفاضات",
+        "group": ""
+      },
+      {
+        "src": "/images/2026/07/life-adult-briefs-new-improved-new-improved-10.webp",
+        "en": "XL · 10 briefs",
+        "ar": "XL · 10 حفاضات",
+        "group": ""
+      },
+      {
+        "src": "/images/2026/07/life-adult-briefs-new-improved-new-improved-12.webp",
+        "en": "Large · 12 briefs",
+        "ar": "كبير · 12 حفاضاً",
+        "group": ""
+      },
+      {
+        "src": "/images/2026/07/life-adult-briefs-new-improved-new-improved-14.webp",
+        "en": "Medium · 14 briefs",
+        "ar": "وسط · 14 حفاضاً",
+        "group": ""
+      },
+      {
+        "src": "/images/2026/07/life-adult-briefs-new-improved-new-improved-16.webp",
+        "en": "Small · 16 briefs",
+        "ar": "صغير · 16 حفاضاً",
+        "group": ""
+      }
+    ],
+    "thumb": "/images/2026/07/life-adult-briefs-new-improved-new-improved-12.webp",
+    "thumbAlt": "Life Adult Briefs — Large · 12 briefs",
+    "ranges": [
+      "adult-care"
+    ],
+    "seo": {
+      "title": "Life Adult Briefs | Sizes Small to XXL | Made in Jordan",
+      "desc": {
+        "en": "Life adult briefs in five sizes from Small to XXL, with a cloth-like cover, refastenable tabs, leak guards and a wetness indicator.",
+        "ar": "حفاضات لايف للبالغين بخمسة مقاسات من صغير إلى XXL، بغطاء يشبه القماش ولواصق قابلة لإعادة الإغلاق وحواجز تسرّب ومؤشر بلل."
+      },
+      "titleAr": "لايف حفاضات البالغين | مقاسات من صغير إلى XXL"
+    }
+  },
+  {
+    "slug": "life-adult-pants",
+    "order": 302,
+    "title": {
+      "en": "Life Adult Pants",
+      "ar": "لايف بانتس للبالغين"
+    },
+    "arabicName": "لايف بانتس للبالغين",
+    "body": {
+      "en": "<p class=\"has-large-font-size\">Pulls on like underwear, because for a lot of people that is the whole point.</p>\n<ul>\n<li><strong>Underwear style</strong> — pulls up and sits like ordinary underwear.</li>\n<li><strong>Tear-away sides</strong> — comes off without undressing.</li>\n<li><strong>Breathable and discreet</strong> — thin enough to stay invisible under clothing.</li>\n</ul>\n<p>Manufactured in Amman by Khattab Group.</p>",
+      "ar": "<p class=\"has-large-font-size\">تُلبَس سحباً كالملابس الداخلية، ولكثير من الناس هذا هو بيت القصيد.</p>\n<ul>\n<li><strong>بأسلوب الملابس الداخلية</strong> — تُسحب وتستقر كالملابس الداخلية العادية.</li>\n<li><strong>جوانب سهلة التمزيق</strong> — تُنزع دون خلع الملابس.</li>\n<li><strong>تسمح بمرور الهواء وغير ملحوظة</strong> — رفيعة بما يكفي لتبقى خفية تحت الملابس.</li>\n</ul>\n<p>تُصنّع في عمّان لدى مجموعة الخطاب.</p>"
+    },
+    "count": "12 to 20 per pack",
+    "sizes": "",
+    "formats": [
+      [
+        "Packs of 12, 14, 18 and 20",
+        "عبوات 12 و14 و18 و20"
+      ]
+    ],
+    "chart": [],
+    "gallery": [
+      {
+        "src": "/images/2026/07/life-adult-briefs-pants-pants-12.webp",
+        "en": "12 pants",
+        "ar": "12 قطعة",
+        "group": ""
+      },
+      {
+        "src": "/images/2026/07/life-adult-briefs-pants-pants-14.webp",
+        "en": "14 pants",
+        "ar": "14 قطعة",
+        "group": ""
+      },
+      {
+        "src": "/images/2026/07/life-adult-briefs-pants-pants-18.webp",
+        "en": "18 pants",
+        "ar": "18 قطعة",
+        "group": ""
+      },
+      {
+        "src": "/images/2026/07/life-adult-briefs-pants-pants-20.webp",
+        "en": "20 pants",
+        "ar": "20 قطعة",
+        "group": ""
+      }
+    ],
+    "thumb": "/images/2026/07/life-adult-briefs-pants-pants-18.webp",
+    "thumbAlt": "Life Adult Pants — 18 pants",
+    "ranges": [
+      "adult-care"
+    ],
+    "seo": {
+      "title": "Life Adult Pull-Up Pants | Packs of 12 to 20 | Jordan",
+      "desc": {
+        "en": "Life adult pull-up pants — underwear-style protection with tear-away sides, in packs of 12, 14, 18 and 20. Made in Amman, Jordan.",
+        "ar": "بانتس لايف للبالغين — حماية بأسلوب الملابس الداخلية بجوانب سهلة التمزيق، بعبوات 12 و14 و18 و20. تُصنّع في عمّان."
+      },
+      "titleAr": "لايف بانتس للبالغين | عبوات من 12 إلى 20"
+    }
+  },
+  {
+    "slug": "life-under-pads",
+    "order": 303,
+    "title": {
+      "en": "Life Under Pads",
+      "ar": "لايف مفارش واقية"
+    },
+    "arabicName": "لايف مفارش واقية",
+    "body": {
+      "en": "<p class=\"has-large-font-size\">For the bed, the chair and the car seat — protection that is thrown away rather than washed.</p>\n<ul>\n<li><strong>Absorbent core with a waterproof backing</strong> — keeps the surface underneath dry.</li>\n<li><strong>Three pack sizes</strong> — 10 for home, 50 for care settings.</li>\n</ul>\n<p>Manufactured in Amman by Khattab Group.</p>",
+      "ar": "<p class=\"has-large-font-size\">للسرير والكرسي ومقعد السيارة — حماية تُرمى بعد الاستعمال بدل أن تُغسل.</p>\n<ul>\n<li><strong>نواة ماصة بطبقة سفلية مقاومة للماء</strong> — تُبقي السطح تحتها جافاً.</li>\n<li><strong>ثلاثة أحجام عبوات</strong> — 10 للبيت، و50 لمراكز الرعاية.</li>\n</ul>\n<p>تُصنّع في عمّان لدى مجموعة الخطاب.</p>"
+    },
+    "count": "10, 25 or 50",
+    "sizes": "",
+    "formats": [
+      [
+        "Pack of 10",
+        "عبوة 10"
+      ],
+      [
+        "Pack of 25",
+        "عبوة 25"
+      ],
+      [
+        "Pack of 50",
+        "عبوة 50"
+      ]
+    ],
+    "chart": [],
+    "gallery": [
+      {
+        "src": "/images/2026/07/life-ppe-under-pads-life-ppe-under-pads-10-25-50-under-pads-10.webp",
+        "en": "10 pads",
+        "ar": "10 مفارش",
+        "group": ""
+      },
+      {
+        "src": "/images/2026/07/life-ppe-under-pads-life-ppe-under-pads-10-25-50-under-pads-25.webp",
+        "en": "25 pads",
+        "ar": "25 مفرشاً",
+        "group": ""
+      },
+      {
+        "src": "/images/2026/07/life-ppe-under-pads-life-ppe-under-pads-10-25-50-under-pads-50.webp",
+        "en": "50 pads",
+        "ar": "50 مفرشاً",
+        "group": ""
+      }
+    ],
+    "thumb": "/images/2026/07/life-ppe-under-pads-life-ppe-under-pads-10-25-50-under-pads-25.webp",
+    "thumbAlt": "Life Under Pads — 25 pads",
+    "ranges": [
+      "adult-care"
+    ],
+    "seo": {
+      "title": "Life Disposable Under Pads | Packs of 10, 25 and 50",
+      "desc": {
+        "en": "Life disposable under pads for beds and chairs — absorbent core with a waterproof backing, in packs of 10, 25 and 50. Made in Jordan.",
+        "ar": "مفارش لايف الواقية للأسرّة والكراسي — نواة ماصة بطبقة سفلية مقاومة للماء، بعبوات 10 و25 و50. صنع في الأردن."
+      },
+      "titleAr": "لايف مفارش واقية للاستعمال مرة واحدة | عبوات 10 و25 و50"
+    }
+  },
+  {
+    "slug": "life-touch-120-wipes",
+    "order": 401,
+    "title": {
+      "en": "Life Touch Wet Wipes · 120",
+      "ar": "مناديل لايف تاتش المبللة · 120"
+    },
+    "arabicName": "مناديل لايف تاتش المبللة · 120",
+    "body": {
+      "en": "<p class=\"has-large-font-size\">A hundred and twenty wipes, in five scents — including oud, because this is Jordan.</p>\n<ul>\n<li><strong>Five scents</strong> — chamomile, French lavender, oud, rose, and unscented for sensitive skin.</li>\n<li><strong>Resealable lid</strong> — keeps the pack moist to the last wipe.</li>\n<li><strong>Soft and substantial</strong> — a wipe that does not tear halfway through the job.</li>\n</ul>\n<p>Manufactured in Amman by Khattab Group.</p>",
+      "ar": "<p class=\"has-large-font-size\">مئة وعشرون منديلاً، بخمس روائح — من بينها العود، لأننا في الأردن.</p>\n<ul>\n<li><strong>خمس روائح</strong> — البابونج، واللافندر الفرنسي، والعود، والورد، وبدون رائحة للبشرة الحسّاسة.</li>\n<li><strong>غطاء قابل لإعادة الإغلاق</strong> — يحافظ على رطوبة العبوة حتى آخر منديل.</li>\n<li><strong>ناعمة ومتينة</strong> — منديل لا يتمزّق في منتصف المهمة.</li>\n</ul>\n<p>تُصنّع في عمّان لدى مجموعة الخطاب.</p>"
+    },
+    "count": "120 wipes",
+    "sizes": "Five scents",
+    "formats": [
+      [
+        "Chamomile",
+        "البابونج"
+      ],
+      [
+        "French lavender",
+        "اللافندر الفرنسي"
+      ],
+      [
+        "Oud",
+        "العود"
+      ],
+      [
+        "Rose",
+        "الورد"
+      ],
+      [
+        "Unscented",
+        "بدون رائحة"
+      ]
+    ],
+    "chart": [],
+    "gallery": [
+      {
+        "src": "/images/2026/07/life-touch-life-touch-120-wipes-chamomile.webp",
+        "en": "Chamomile",
+        "ar": "البابونج",
+        "group": ""
+      },
+      {
+        "src": "/images/2026/07/life-touch-life-touch-120-wipes-french-lavender.webp",
+        "en": "French lavender",
+        "ar": "اللافندر الفرنسي",
+        "group": ""
+      },
+      {
+        "src": "/images/2026/07/life-touch-life-touch-120-wipes-oud.webp",
+        "en": "Oud",
+        "ar": "العود",
+        "group": ""
+      },
+      {
+        "src": "/images/2026/07/life-touch-life-touch-120-wipes-rose.webp",
+        "en": "Rose",
+        "ar": "الورد",
+        "group": ""
+      },
+      {
+        "src": "/images/2026/07/life-touch-life-touch-120-wipes-unsecented.webp",
+        "en": "Unscented",
+        "ar": "بدون رائحة",
+        "group": ""
+      }
+    ],
+    "thumb": "/images/2026/07/life-touch-life-touch-120-wipes-oud.webp",
+    "thumbAlt": "Life Touch Wet Wipes · 120 — Oud",
+    "ranges": [
+      "life"
+    ],
+    "seo": {
+      "title": "Life Touch Wet Wipes 120 | Five Scents | Made in Jordan",
+      "desc": {
+        "en": "Life Touch scented wet wipes, 120 to a resealable pack — chamomile, French lavender, oud, rose and unscented. Made in Amman.",
+        "ar": "مناديل لايف تاتش المبللة المعطّرة، 120 منديلاً في عبوة قابلة لإعادة الإغلاق — البابونج واللافندر الفرنسي والعود والورد وبدون رائحة."
+      },
+      "titleAr": "مناديل لايف تاتش المبللة 120 | خمس روائح"
+    }
+  },
+  {
+    "slug": "life-touch-72-wipes",
+    "order": 402,
+    "title": {
+      "en": "Life Touch Wet Wipes · 72",
+      "ar": "مناديل لايف تاتش المبللة · 72"
+    },
+    "arabicName": "مناديل لايف تاتش المبللة · 72",
+    "body": {
+      "en": "<p class=\"has-large-font-size\">The smaller pack, in three lighter scents.</p>\n<ul>\n<li><strong>Seventy-two wipes</strong> — the size that lives in a handbag rather than a cupboard.</li>\n<li><strong>Papaya, tropical and wild flowers</strong> — lighter than the 120 range.</li>\n</ul>\n<p>Manufactured in Amman by Khattab Group.</p>",
+      "ar": "<p class=\"has-large-font-size\">العبوة الأصغر، بثلاث روائح أخفّ.</p>\n<ul>\n<li><strong>اثنان وسبعون منديلاً</strong> — الحجم الذي يعيش في حقيبة اليد لا في الخزانة.</li>\n<li><strong>الباباي والاستوائي والزهور البرية</strong> — أخفّ من تشكيلة الـ120.</li>\n</ul>\n<p>تُصنّع في عمّان لدى مجموعة الخطاب.</p>"
+    },
+    "count": "72 wipes",
+    "sizes": "Three scents",
+    "formats": [
+      [
+        "Papaya",
+        "الباباي"
+      ],
+      [
+        "Tropical",
+        "استوائي"
+      ],
+      [
+        "Wild flowers",
+        "الزهور البرية"
+      ]
+    ],
+    "chart": [],
+    "gallery": [
+      {
+        "src": "/images/2026/07/life-touch-life-touch-72-wipes-papaya.webp",
+        "en": "Papaya",
+        "ar": "الباباي",
+        "group": ""
+      },
+      {
+        "src": "/images/2026/07/life-touch-life-touch-72-wipes-tropical.webp",
+        "en": "Tropical",
+        "ar": "استوائي",
+        "group": ""
+      },
+      {
+        "src": "/images/2026/07/life-touch-life-touch-72-wipes-wild-flowers.webp",
+        "en": "Wild flowers",
+        "ar": "الزهور البرية",
+        "group": ""
+      }
+    ],
+    "thumb": "/images/2026/07/life-touch-life-touch-72-wipes-tropical.webp",
+    "thumbAlt": "Life Touch Wet Wipes · 72 — Tropical",
+    "ranges": [
+      "life"
+    ],
+    "seo": {
+      "title": "Life Touch Wet Wipes 72 | Papaya, Tropical, Wild Flowers",
+      "desc": {
+        "en": "Life Touch wet wipes, 72 to a pack, in papaya, tropical and wild flowers — the handbag size. Made in Amman, Jordan by Khattab Group.",
+        "ar": "مناديل لايف تاتش المبللة، 72 منديلاً في العبوة، بروائح الباباي والاستوائي والزهور البرية — حجم حقيبة اليد. تُصنّع في عمّان."
+      },
+      "titleAr": "مناديل لايف تاتش المبللة 72 | الباباي والاستوائي والزهور البرية"
+    }
+  },
+  {
+    "slug": "life-makeup-remover-wipes",
+    "order": 403,
+    "title": {
+      "en": "Life Make-Up Remover Wipes",
+      "ar": "مناديل لايف لإزالة المكياج"
+    },
+    "arabicName": "مناديل لايف لإزالة المكياج",
+    "body": {
+      "en": "<p class=\"has-large-font-size\">Takes the day off in one pass, without stripping the skin.</p>\n<ul>\n<li><strong>Removes face and eye make-up</strong> — including the stubborn parts.</li>\n<li><strong>Leaves skin conditioned</strong> — no tight, stripped feeling afterwards.</li>\n</ul>\n<p>Manufactured in Amman by Khattab Group.</p>",
+      "ar": "<p class=\"has-large-font-size\">تزيل أثر اليوم بمسحة واحدة، دون أن تجرّد البشرة.</p>\n<ul>\n<li><strong>تزيل مكياج الوجه والعينين</strong> — بما في ذلك الأجزاء العنيدة.</li>\n<li><strong>تترك البشرة مرطّبة</strong> — بلا ذلك الإحساس بالشدّ والجفاف بعدها.</li>\n</ul>\n<p>تُصنّع في عمّان لدى مجموعة الخطاب.</p>"
+    },
+    "count": "",
+    "sizes": "",
+    "formats": [],
+    "chart": [],
+    "gallery": [
+      {
+        "src": "/images/2026/07/life-make-up-remover-wipes-make-up-remover-wipes.webp",
+        "en": "Make-up remover wipes",
+        "ar": "مناديل إزالة المكياج",
+        "group": ""
+      },
+      {
+        "src": "/images/2026/07/life-make-up-remover-wipes-make-up-remover-wipes2.webp",
+        "en": "Make-up remover wipes · alternate pack",
+        "ar": "مناديل إزالة المكياج · عبوة أخرى",
+        "group": ""
+      }
+    ],
+    "thumb": "/images/2026/07/life-make-up-remover-wipes-make-up-remover-wipes2.webp",
+    "thumbAlt": "Life Make-Up Remover Wipes — Make-up remover wipes · alternate pack",
+    "ranges": [
+      "life"
+    ],
+    "seo": {
+      "title": "Life Make-Up Remover Wipes | Made in Jordan",
+      "desc": {
+        "en": "Life make-up remover wipes — removes face and eye make-up in one pass and leaves skin conditioned. Made in Amman by Khattab Group.",
+        "ar": "مناديل لايف لإزالة المكياج — تزيل مكياج الوجه والعينين بمسحة واحدة وتترك البشرة مرطّبة. تُصنّع في عمّان لدى مجموعة الخطاب."
+      },
+      "titleAr": "مناديل لايف لإزالة المكياج"
+    }
+  },
+  {
+    "slug": "life-sanabel-tissues",
+    "order": 410,
+    "title": {
+      "en": "Life Sanabel Tissues",
+      "ar": "مناديل لايف سنابل الورقية، 200 منديل"
+    },
+    "arabicName": "",
+    "body": {
+      "en": "<p class=\"has-large-font-size\">Two hundred soft sheets, for the box that lives on the table.</p>\n<ul>\n<li><strong>Soft to the touch</strong> — gentle enough for a child&#8217;s face.</li>\n<li><strong>Strong when damp</strong> — holds together in use rather than tearing.</li>\n<li><strong>Easy dispensing</strong> — one sheet at a time, so the box lasts as long as it should.</li>\n</ul>\n<p>Held to the same standard as everything else we make, in Al Qastal, Amman.</p>",
+      "ar": ""
+    },
+    "count": "200 sheets",
+    "sizes": "",
+    "formats": [],
+    "chart": [],
+    "gallery": [],
+    "thumb": "/images/2023/03/Life-Sanabel-200-Tissue-3D-remov-scaled.png",
+    "thumbAlt": "Life Sanabel Tissues pack (200 sheets)",
+    "ranges": [
+      "life"
+    ],
+    "seo": {
+      "title": "Life Sanabel Facial Tissues, 200 Sheets | Baby Life Jordan",
+      "desc": {
+        "en": "Life Sanabel facial tissues, 200 soft sheets per box. Gentle everyday tissues made in Amman, Jordan by Khattab Group.",
+        "ar": "مناديل لايف سنابل الورقية، 200 منديل ناعم في العلبة. مناديل يومية لطيفة تُصنّع في عمّان، الأردن، من قبل مجموعة الخطاب."
+      },
+      "titleAr": "مناديل لايف سنابل الورقية، 200 منديل"
+    }
+  },
+  {
+    "slug": "life-sanabel-family",
+    "order": 410,
+    "title": {
+      "en": "Life Sanabel · Family",
+      "ar": "مناديل لايف سنابل، عبوة العائلة"
+    },
+    "arabicName": "",
+    "body": {
+      "en": "<p class=\"has-large-font-size\">The family pack, for households that get through a box a week.</p>\n<ul>\n<li><strong>Larger format</strong> — fewer trips to the shop, the same tissue.</li>\n<li><strong>Soft to the touch</strong> — gentle enough for a child&#8217;s face.</li>\n<li><strong>Everyday strength</strong> — holds together in use rather than tearing.</li>\n</ul>\n<p>Held to the same standard as everything else we make, in Al Qastal, Amman.</p>",
+      "ar": ""
+    },
+    "count": "Family pack",
+    "sizes": "",
+    "formats": [],
+    "chart": [],
+    "gallery": [],
+    "thumb": "/images/2023/03/tobecom3-scaled.webp",
+    "thumbAlt": "Life Sanabel Family pack",
+    "ranges": [
+      "life"
+    ],
+    "seo": {
+      "title": "Life Sanabel Family Pack Tissues | Baby Life Jordan",
+      "desc": {
+        "en": "Life Sanabel tissues in a family pack — soft, everyday essentials held to the same standard as everything else we make. Made in Amman, Jordan.",
+        "ar": "مناديل لايف سنابل بعبوة العائلة — أساسيات يومية ناعمة، بالمعيار نفسه الذي نصنع به كل شيء. صنع في عمّان، الأردن."
+      },
+      "titleAr": "مناديل لايف سنابل، عبوة العائلة"
+    }
+  }
+]

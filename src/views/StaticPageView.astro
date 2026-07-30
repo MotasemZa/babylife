@@ -1,0 +1,27 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHead from '../components/PageHead.astro';
+import CtaBand from '../components/CtaBand.astro';
+import { t, type Lang } from '../lib/i18n';
+import pages from '../data/pages.json';
+
+interface Props { lang: Lang; page: 'about' | 'careers' }
+const { lang, page } = Astro.props;
+
+const data = (pages as any)[page];
+const title = data.title[lang] || data.title.en;
+const body = data.body[lang] || data.body.en;
+const lede = data.lede[lang] || data.lede.en;
+---
+
+<Base lang={lang} title={`${title} | Baby Life`} description={data.seo.desc || lede}>
+  <PageHead lang={lang} eyebrow={t(lang, 'babyLife')} title={title} lede={lede} />
+
+  <article class="section section-tight">
+    <div class="wrap">
+      <div class="entry" set:html={body} />
+    </div>
+  </article>
+
+  <CtaBand lang={lang} contactButtons />
+</Base>

@@ -1,0 +1,10 @@
+---
+import PostView from '../../../views/PostView.astro';
+import posts from '../../../data/posts.json';
+
+export function getStaticPaths() {
+  return posts.map((p) => ({ params: { slug: p.slug } }));
+}
+const { slug } = Astro.params;
+---
+<PostView lang="ar" slug={slug!} />

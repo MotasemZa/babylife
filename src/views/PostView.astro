@@ -1,0 +1,58 @@
+---
+import Base from '../layouts/Base.astro';
+import CtaBand from '../components/CtaBand.astro';
+import { t, base, fmtDate, readMinutes, type Lang } from '../lib/i18n';
+import posts from '../data/posts.json';
+
+interface Props { lang: Lang; slug: string }
+const { lang, slug } = Astro.props;
+const b = base(lang);
+
+const idx = posts.findIndex((p) => p.slug === slug);
+const post = posts[idx]!;
+const newer = posts[idx - 1];
+const older = posts[idx + 1];
+
+const body = post.body[lang] || post.body.en;
+const postTitle = post.title[lang] || post.title.en;
+const description = (lang === 'ar' && post.excerpt.ar) ? post.excerpt.ar : (post.seo.desc || post.excerpt.en);
+---
+
+<Base lang={lang} title={`${postTitle} | Baby Life`} description={description} ogImage={post.thumb}>
+  <header class="page-head page-head--article">
+    <div class="wrap">
+      <span class="eyebrow">
+        {fmtDate(lang, post.date)} &middot; {t(lang, 'minRead').replace('%d', String(readMinutes(body)))}
+      </span>
+      <h1>{postTitle}</h1>
+      {(post.excerpt[lang] || post.excerpt.en) && <p class="lede">{post.excerpt[lang] || post.excerpt.en}</p>}
+    </div>
+  </header>
+
+  <article class="section section-tight">
+    <div class="wrap">
+      {post.thumb && (
+        <figure class="page-figure">
+          <img src={post.thumb} alt={post.thumbAlt || postTitle} width="1200" height="800" />
+        </figure>
+      )}
+
+      <div class="entry" set:html={body} />
+
+      <nav class="post-nav" aria-label={t(lang, 'moreArticles')}>
+        {older ? (
+          <span class="post-nav-prev">
+            <a href={`${b}/blog/${older.slug}/`}>&larr; {older.title[lang] || older.title.en}</a>
+          </span>
+        ) : <span />}
+        {newer ? (
+          <span class="post-nav-next">
+            <a href={`${b}/blog/${newer.slug}/`}>{newer.title[lang] || newer.title.en} &rarr;</a>
+          </span>
+        ) : <span />}
+      </nav>
+    </div>
+  </article>
+
+  <CtaBand lang={lang} contactButtons />
+</Base>

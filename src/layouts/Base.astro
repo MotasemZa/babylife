@@ -1,0 +1,170 @@
+---
+import '../styles/global.css';
+import { t, base, altPath, type Lang } from '../lib/i18n';
+import site from '../data/site.json';
+import SocialRow from '../components/SocialRow.astro';
+import JordanSeal from '../components/JordanSeal.astro';
+import ranges from '../data/ranges.json';
+
+interface Props {
+  lang: Lang;
+  title: string;
+  description: string;
+  ogImage?: string;
+}
+const { lang, title, description, ogImage = '/images/2026/07/babylife-share-card.png' } = Astro.props;
+
+const path = Astro.url.pathname;
+const other = altPath(lang, path);
+const b = base(lang);
+const tel = site.contact.phone.replace(/[^+\d]/g, '');
+
+const navItems = [
+  { href: `${b}/`, label: t(lang, 'home') },
+  { href: `${b}/products/`, label: t(lang, 'products') },
+  { href: `${b}/about/`, label: t(lang, 'about') },
+  { href: `${b}/blog/`, label: t(lang, 'journal') },
+  { href: `${b}/careers/`, label: t(lang, 'careers') },
+  { href: `${b}/contact/`, label: t(lang, 'contact') },
+];
+const isCurrent = (href: string) => (href === `${b}/` ? path === `${b}/` || path === b : path.startsWith(href));
+
+const enPath = lang === 'en' ? path : other;
+const arPath = lang === 'ar' ? path : other;
+---
+
+<!doctype html>
+<html lang={lang === 'ar' ? 'ar' : 'en'} dir={lang === 'ar' ? 'rtl' : 'ltr'}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="icon" href="/favicon.png" />
+    <link rel="canonical" href={new URL(path, Astro.site)} />
+    <link rel="alternate" hreflang="en" href={new URL(enPath, Astro.site)} />
+    <link rel="alternate" hreflang="ar" href={new URL(arPath, Astro.site)} />
+    <link rel="alternate" hreflang="x-default" href={new URL(enPath, Astro.site)} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={new URL(path, Astro.site)} />
+    <meta property="og:site_name" content="Baby Life" />
+    <meta property="og:image" content={new URL(ogImage, Astro.site)} />
+    <meta property="og:locale" content={lang === 'ar' ? 'ar_JO' : 'en_US'} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Figtree:wght@300..700&family=Tajawal:wght@300;400;500;700;800&display=swap"
+    />
+  </head>
+  <body>
+    <div class="jo-stripe" aria-hidden="true"></div>
+    <a class="skip" href="#main">{t(lang, 'skip')}</a>
+
+    <header class="site-header">
+      <div class="wrap nav">
+        <a class="brand" href={`${b}/`}>
+          <img src="/images/2023/05/Baby-Life-Logo-01.png" alt="Baby Life" width="240" height="92" />
+        </a>
+
+        <button class="nav-toggle" aria-expanded="false" aria-controls="primary-menu" aria-label={t(lang, 'menu')}>&#9776;</button>
+
+        <ul class="nav-menu" id="primary-menu">
+          {navItems.map((item) => (
+            <li><a href={item.href} aria-current={isCurrent(item.href) ? 'page' : undefined}>{item.label}</a></li>
+          ))}
+        </ul>
+
+        <a class:list={['nav-lang', { 'is-latin': lang === 'ar' }]} href={other} hreflang={lang === 'ar' ? 'en' : 'ar'}>
+          {lang === 'ar' ? 'English' : 'العربية'}
+        </a>
+      </div>
+    </header>
+
+    <main id="main">
+      <slot />
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <div class="f-grid">
+          <div>
+            <a class="brand" href={`${b}/`}>
+              <img src="/images/2023/03/BANNER-033.png" alt="Baby Life" />
+            </a>
+            <p style="max-width:32ch">{t(lang, 'footerBlurb')}</p>
+            <SocialRow />
+          </div>
+
+          <div>
+            <h4>{t(lang, 'products')}</h4>
+            <ul>
+              {ranges.map((r) => (
+                <li><a href={`${b}/range/${r.slug}/`}>{r.name[lang]}</a></li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h4>{t(lang, 'company')}</h4>
+            <ul>
+              <li><a href={`${b}/about/`}>{t(lang, 'about')}</a></li>
+              <li><a href={`${b}/blog/`}>{t(lang, 'journal')}</a></li>
+              <li><a href={`${b}/careers/`}>{t(lang, 'careers')}</a></li>
+              <li><a href={`${b}/contact/`}>{t(lang, 'contact')}</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4>{t(lang, 'forContact')}</h4>
+            <ul>
+              <li>{site.contact.address[lang]}</li>
+              <li><a href={`tel:${tel}`} dir="ltr">{site.contact.phone}</a></li>
+              <li><a href={`mailto:${site.contact.email}`} dir="ltr">{site.contact.email}</a></li>
+              <li>{site.contact.hours[lang]}</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="f-bottom">
+          <span>&copy; {new Date().getFullYear()} Baby Life &middot; Khattab Group</span>
+          <span class="f-origin">
+            <JordanSeal lang={lang} />
+          </span>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Mobile nav toggle
+      const toggle = document.querySelector('.nav-toggle');
+      const menu = document.getElementById('primary-menu');
+      toggle?.addEventListener('click', () => {
+        const open = menu?.classList.toggle('is-open');
+        toggle.setAttribute('aria-expanded', String(!!open));
+      });
+
+      // Scroll reveal
+      const revealEls = document.querySelectorAll('.reveal');
+      if ('IntersectionObserver' in window && revealEls.length) {
+        const io = new IntersectionObserver(
+          (entries) => {
+            for (const e of entries) {
+              if (e.isIntersecting) {
+                e.target.classList.add('is-in');
+                io.unobserve(e.target);
+              }
+            }
+          },
+          { rootMargin: '0px 0px -8% 0px' }
+        );
+        revealEls.forEach((el) => io.observe(el));
+      } else {
+        revealEls.forEach((el) => el.classList.add('is-in'));
+      }
+    </script>
+  </body>
+</html>
