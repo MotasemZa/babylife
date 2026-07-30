@@ -1,0 +1,1 @@
+ALTER TABLE public.bulk_import_items ADD COLUMN family_key text;

@@ -1,0 +1,1 @@
+ALTER TABLE user_shopify_credentials ADD COLUMN IF NOT EXISTS label text;
