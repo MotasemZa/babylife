@@ -74,8 +74,11 @@ html[dir='rtl'] h1, html[dir='rtl'] h2, html[dir='rtl'] h3, html[dir='rtl'] h4 {
   letter-spacing: 0;
 }
 
-h1 { font-size: clamp(2.4rem, 5.4vw, 3.9rem); }
-h2 { font-size: clamp(1.8rem, 3.6vw, 2.6rem); }
+/* A wide jump from h2 to h1, and from h3 to h2. The old scale sat inside a
+   1.5x range end to end, which reads as one undifferentiated size once the
+   page is full of cards — the reason the site felt flat rather than quiet. */
+h1 { font-size: clamp(2.9rem, 6.6vw, 5.2rem); letter-spacing: -0.025em; }
+h2 { font-size: clamp(2.1rem, 4.4vw, 3.3rem); letter-spacing: -0.02em; }
 h3 { font-size: clamp(1.2rem, 2vw, 1.45rem); }
 
 p { margin: 0 0 1em; }
@@ -260,6 +263,14 @@ html[dir='ltr'] .nav-lang { font-family: 'Tajawal', sans-serif; }
 }
 .btn-ghost:hover { border-color: var(--teal); color: var(--teal-deep); }
 
+/* Ghost button on a dark ground — the bordered variant disappears there. */
+.btn-onDark {
+  background: transparent;
+  color: #fff;
+  border: 1px solid color-mix(in srgb, #fff 40%, transparent);
+}
+.btn-onDark:hover { background: color-mix(in srgb, #fff 12%, transparent); color: #fff; border-color: #fff; }
+
 .cta .btn-ghost, .cta a.btn-primary { border-color: rgba(255, 255, 255, 0.4); }
 .cta .btn-ghost { color: #fff; }
 .cta .btn-ghost:hover { color: #fff; border-color: #fff; }
@@ -295,22 +306,26 @@ html[dir='rtl'] .eyebrow { letter-spacing: 0.04em; }
   background: var(--teal);
 }
 
-/* ---- Hero ---- */
+/* ---- Hero ----
+   Brand ground rather than white. With no lifestyle photography in the
+   library, the pack itself has to carry the opening — which it can only do at
+   size, and only against a colour that lets a mostly-white pack read. */
 .hero {
   position: relative;
+  color: #fff;
   background:
-    radial-gradient(52rem 30rem at 82% -12%, color-mix(in srgb, var(--teal-wash) 85%, transparent), transparent 68%),
-    radial-gradient(38rem 26rem at -8% 108%, color-mix(in srgb, var(--blush) 42%, transparent), transparent 70%),
-    var(--paper);
+    radial-gradient(46rem 34rem at 78% 8%, color-mix(in srgb, var(--teal) 55%, transparent), transparent 70%),
+    radial-gradient(34rem 30rem at 4% 96%, color-mix(in srgb, #0f2b29 70%, transparent), transparent 72%),
+    linear-gradient(158deg, #1a4a46 0%, var(--teal-ink) 58%, #102523 100%);
   overflow: clip;
 }
 
 .hero-grid {
   display: grid;
-  grid-template-columns: 1.05fr 0.95fr;
-  gap: clamp(2rem, 5vw, 4.5rem);
+  grid-template-columns: 1.12fr 0.88fr;
+  gap: clamp(2rem, 5vw, 4rem);
   align-items: center;
-  padding-block: clamp(3rem, 7vw, 6rem);
+  padding-block: clamp(3.4rem, 8vw, 7rem) clamp(2.4rem, 5vw, 4rem);
 }
 
 .bilingual {
@@ -318,57 +333,86 @@ html[dir='rtl'] .eyebrow { letter-spacing: 0.04em; }
   align-items: center;
   gap: 0.8em;
   font-size: 0.95rem;
-  color: var(--ink-soft);
+  color: color-mix(in srgb, #fff 74%, transparent);
   margin-block-end: 1.4rem;
 }
-.bilingual .ar { font-family: 'Tajawal', sans-serif; font-weight: 700; color: var(--teal-deep); }
-.bilingual .bar { width: 1px; height: 1.1em; background: var(--line); }
+.bilingual .ar { font-family: 'Tajawal', sans-serif; font-weight: 700; color: #9fdcd4; }
+.bilingual .bar { width: 1px; height: 1.1em; background: color-mix(in srgb, #fff 30%, transparent); }
 
-.hero h1 { margin-block-end: 0.45em; }
+/* Held below the global h1 ceiling: the hero headline shares its row with the
+   pack, so the full display size would break it into single-word lines. */
+.hero h1 {
+  color: #fff;
+  font-size: clamp(2.7rem, 5.2vw, 4.5rem);
+  margin-block-end: 0.4em;
+}
 .hero h1 em {
   font-style: italic;
-  color: var(--teal);
+  color: #7fd4c9;
 }
 html[dir='rtl'] .hero h1 em { font-style: normal; }
 
 .hero-lede {
-  font-size: clamp(1.08rem, 1.6vw, 1.22rem);
-  color: var(--ink-soft);
-  max-width: 34rem;
-  margin-block-end: 1.8rem;
+  font-size: clamp(1.08rem, 1.6vw, 1.26rem);
+  color: color-mix(in srgb, #fff 80%, transparent);
+  max-width: 36rem;
+  margin-block-end: 2rem;
 }
 
 .hero-cta { display: flex; flex-wrap: wrap; gap: 0.8rem; }
 
-.hero-media { position: relative; }
-.hero-photo {
-  border-radius: var(--r-xl);
-  background: var(--white);
-  box-shadow: var(--shadow-lg);
-  padding: clamp(1.2rem, 3vw, 2.4rem);
-}
-.hero-photo img { margin-inline: auto; }
-
-.hero-badge {
-  position: absolute;
-  inset-inline-start: -1rem;
-  bottom: 1.6rem;
+/* The pack is the picture. No card, no frame — it sits on the ground with a
+   pool of light under it so it reads as an object rather than a cut-out. */
+.hero-media {
+  position: relative;
   display: grid;
-  gap: 0.1em;
-  background: var(--teal-ink);
-  color: #fff;
-  border-radius: var(--r-md);
-  padding: 0.9em 1.3em;
-  max-width: 240px;
-  box-shadow: var(--shadow-lg);
+  place-items: center;
+  padding-block: clamp(1rem, 3vw, 2rem);
 }
-.hero-badge .num { font-family: var(--font-display); font-size: 1.9rem; font-weight: 600; line-height: 1; }
-.hero-badge .lbl { font-size: 0.78rem; opacity: 0.85; line-height: 1.4; }
+.hero-media::before {
+  content: '';
+  position: absolute;
+  inset: 6% 2% 4%;
+  border-radius: 50%;
+  background: radial-gradient(closest-side, color-mix(in srgb, #7fd4c9 30%, transparent), transparent 72%);
+  filter: blur(6px);
+}
+.hero-media img {
+  position: relative;
+  width: min(100%, 34rem);
+  filter: drop-shadow(0 34px 44px rgba(0, 0, 0, 0.42));
+}
+
+.hero-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(1rem, 3vw, 2.4rem);
+  list-style: none;
+  margin: 0;
+  padding: 0 0 clamp(2.6rem, 5vw, 4rem);
+  border-top: 1px solid color-mix(in srgb, #fff 16%, transparent);
+  padding-top: clamp(1.6rem, 3vw, 2.4rem);
+}
+.hero-stats li { display: grid; gap: 0.35em; }
+.hero-stats .n {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3.6vw, 2.9rem);
+  font-weight: 600;
+  line-height: 1;
+  color: #7fd4c9;
+}
+.hero-stats .l {
+  font-size: 0.9rem;
+  line-height: 1.45;
+  color: color-mix(in srgb, #fff 72%, transparent);
+  max-width: 26ch;
+}
 
 @media (max-width: 900px) {
   .hero-grid { grid-template-columns: 1fr; }
-  .hero-media { max-width: 460px; }
-  .hero-badge { inset-inline-start: auto; inset-inline-end: 0; }
+  .hero-media { order: -1; }
+  .hero-media img { width: min(100%, 22rem); }
+  .hero-stats { grid-template-columns: 1fr; gap: 1.2rem; }
 }
 
 /* ---- Range family cards ---- */
@@ -391,13 +435,29 @@ html[dir='rtl'] .hero h1 em { font-style: normal; }
 }
 .family:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
 
+/* The pack fills the card. It was previously inset by a third on every side,
+   which shrank the one asset the page has to sell with. */
 .family .shot {
   display: block;
   aspect-ratio: 1;
-  background: var(--sage);
-  padding: 1.2rem;
+  background: var(--range-tint, var(--sage));
+  padding: 0.6rem;
+  overflow: hidden;
 }
-.family .shot img { width: 100%; height: 100%; object-fit: contain; }
+.family .shot img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.5s var(--ease);
+}
+.family:hover .shot img { transform: scale(1.05); }
+
+/* Each range gets its own ground, so four cards in a row are not four
+   identical grey squares. Tints are the pack colours, well desaturated. */
+.family[data-range='babylife']    { --range-tint: #e4f1ef; }
+.family[data-range='ladylife']    { --range-tint: #fbe7ef; }
+.family[data-range='adult-care']  { --range-tint: #e8eff8; }
+.family[data-range='life']        { --range-tint: #fdf1e0; }
 
 .family .body { padding: 1.2rem 1.4rem 1.5rem; }
 .family .ar-name { font-family: 'Tajawal', sans-serif; font-weight: 700; color: var(--teal); font-size: 0.95rem; }
@@ -436,38 +496,68 @@ html[dir='rtl'] .hero h1 em { font-style: normal; }
 .heritage .eyebrow { color: #8ccfc7; }
 .heritage .eyebrow::before { background: #8ccfc7; }
 
-.h-stats { list-style: none; margin: 0; padding: 0; display: grid; gap: 1.4rem; }
-.h-stat { display: grid; gap: 0.15em; border-inline-start: 3px solid var(--teal); padding-inline-start: 1.1em; }
-.h-stat .n { font-family: var(--font-display); font-size: clamp(1.9rem, 3vw, 2.6rem); font-weight: 600; color: #fff; line-height: 1; }
-.h-stat .l { font-size: 0.88rem; color: #c5d6d3; line-height: 1.45; }
+/* The figures moved up into the hero, so this column carries the two claims
+   that are about the company rather than the construction. */
+.h-points { list-style: none; margin: 0; padding: 0; display: grid; gap: 1.6rem; }
+.h-points li { border-inline-start: 3px solid var(--teal); padding-inline-start: 1.1em; }
+.h-points h3 { color: #fff; font-size: 1.1rem; margin: 0 0 0.3em; }
+.h-points p { color: #c5d6d3; font-size: 0.92rem; line-height: 1.55; margin: 0; }
 
 @media (max-width: 820px) { .heritage-inner { grid-template-columns: 1fr; } }
 
-/* ---- Benefits ---- */
-.ben-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: clamp(1rem, 2vw, 1.6rem);
-}
-@media (max-width: 900px) { .ben-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 540px) { .ben-grid { grid-template-columns: 1fr; } }
+/* ---- Inside the diaper: cutaway + numbered layers ---- */
+.sec-head--wide { max-width: 760px; }
 
-.ben {
-  background: var(--white);
-  border: 1px solid var(--line);
-  border-radius: var(--r-lg);
-  padding: 1.5rem 1.6rem 1.6rem;
-  transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease);
+.cut-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 6vw, 4.5rem);
+  align-items: center;
 }
-.ben:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
-.ben .idx {
-  font-family: var(--font-display);
-  font-style: italic;
+@media (max-width: 900px) { .cut-grid { grid-template-columns: 1fr; } }
+
+.cut-figure { margin: 0; display: grid; place-items: center; }
+.cutaway {
+  width: min(100%, 27rem);
+  height: auto;
+  overflow: visible;
+  filter: drop-shadow(0 22px 40px rgba(22, 48, 46, 0.16));
+}
+.cut-pins circle { fill: var(--teal-ink); }
+.cut-pins text { fill: #fff; font-family: var(--font-text); }
+
+.cut-layers {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: clamp(1.1rem, 2.4vw, 1.7rem);
+  counter-reset: none;
+}
+.cut-layers li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1.1rem;
+  align-items: start;
+  padding-block-end: clamp(1.1rem, 2.4vw, 1.7rem);
+  border-block-end: 1px solid color-mix(in srgb, var(--teal-ink) 12%, transparent);
+}
+.cut-layers li:last-child { border-block-end: 0; padding-block-end: 0; }
+
+.cut-num {
+  display: grid;
+  place-items: center;
+  width: 2.3rem;
+  height: 2.3rem;
+  border-radius: 50%;
+  background: var(--teal-ink);
+  color: #fff;
+  font-weight: 700;
   font-size: 0.95rem;
-  color: var(--teal);
+  flex: none;
 }
-.ben h3 { font-size: 1.15rem; margin-block: 0.5em 0.35em; }
-.ben p { font-size: 0.94rem; color: var(--ink-soft); margin: 0; }
+.cut-layers h3 { margin: 0 0 0.25em; font-size: clamp(1.15rem, 1.8vw, 1.35rem); }
+.cut-layers p { margin: 0; color: var(--ink-soft); font-size: 0.98rem; line-height: 1.6; }
 
 /* ---- Product tiles ---- */
 .gallery {
@@ -492,9 +582,12 @@ html[dir='rtl'] .hero h1 em { font-style: normal; }
 }
 .tile:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); color: inherit; }
 
-.tile .shot { aspect-ratio: 1; padding: 1.1rem; background: var(--white); }
-.tile .shot img { width: 100%; height: 100%; object-fit: contain; transition: transform 0.35s var(--ease); }
-.tile:hover .shot img { transform: scale(1.04); }
+/* Tinted ground and barely any inset. A white pack on a white tile with a
+   1.1rem gutter reads as a stamp; on a tint at full bleed it reads as a
+   product. */
+.tile .shot { aspect-ratio: 1; padding: 0.55rem; background: var(--teal-wash); }
+.tile .shot img { width: 100%; height: 100%; object-fit: contain; transition: transform 0.45s var(--ease); }
+.tile:hover .shot img { transform: scale(1.05); }
 
 .tile .cap { display: grid; gap: 0.15em; padding: 0.9rem 1.15rem 1.15rem; border-top: 1px solid var(--line); }
 .tile .cap-range { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--teal-deep); }
@@ -616,33 +709,51 @@ html[dir='rtl'] .tile .cap-range { letter-spacing: 0.02em; }
   padding-block: clamp(1.6rem, 4vw, 3rem) clamp(2.6rem, 6vw, 4.5rem);
   align-items: start;
 }
+/* A grid item defaults to min-width:auto, which is the width of its widest
+   content — so the scrolling thumbnail rail would otherwise push this column
+   to the full length of the strip and shove the copy off the page. */
+.product-grid > * { min-width: 0; }
 @media (max-width: 860px) { .product-grid { grid-template-columns: 1fr; } }
 
 .product-shot {
   margin: 0;
-  background: var(--white);
+  background: var(--teal-wash);
   border: 1px solid var(--line);
   border-radius: var(--r-xl);
-  padding: clamp(1.2rem, 3vw, 2.2rem);
+  padding: clamp(0.8rem, 2vw, 1.4rem);
   box-shadow: var(--shadow-sm);
 }
 .product-shot img { margin-inline: auto; aspect-ratio: 1; object-fit: contain; }
 .product-cap { text-align: center; font-size: 0.88rem; color: var(--ink-soft); padding-block-start: 0.8em; }
 
+/* A single scrolling rail, not a wrapping grid. The biggest line has 32 pack
+   formats, which wrapped into six rows of thumbnails barely larger than a
+   favicon and pushed the whole right-hand column off the screen. Scrolling
+   keeps the picker one row deep however long the line gets. */
 .pgal-thumbs {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.55rem;
+  gap: 0.6rem;
   margin-block-start: 1rem;
+  padding-block-end: 0.6rem;
+  overflow-x: auto;
+  scroll-snap-type: x proximity;
+  scrollbar-width: thin;
+  scrollbar-color: var(--line) transparent;
+  overscroll-behavior-inline: contain;
 }
+.pgal-thumbs::-webkit-scrollbar { height: 6px; }
+.pgal-thumbs::-webkit-scrollbar-thumb { background: var(--line); border-radius: 999px; }
+
 .pgal-thumb {
-  width: 64px;
-  height: 64px;
-  padding: 6px;
+  flex: none;
+  width: 82px;
+  height: 82px;
+  padding: 5px;
   background: var(--white);
   border: 1.5px solid var(--line);
   border-radius: var(--r-sm);
   cursor: pointer;
+  scroll-snap-align: start;
   transition: border-color 0.15s var(--ease), transform 0.15s var(--ease);
 }
 .pgal-thumb img { width: 100%; height: 100%; object-fit: contain; }

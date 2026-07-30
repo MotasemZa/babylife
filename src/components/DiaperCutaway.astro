@@ -1,0 +1,92 @@
+---
+/**
+ * Cutaway diagram of a diaper, drawn rather than photographed.
+ *
+ * The brand has 120 immaculate pack shots and almost no lifestyle photography,
+ * so the one thing the catalogue cannot show is what is *inside* a diaper —
+ * which is the whole basis of the quality claim. Drawing it costs nothing to
+ * license, scales to any screen, and recolours with the palette.
+ *
+ * Geometry notes, since the numbers look arbitrary otherwise: the silhouette
+ * is an hourglass 44–396 wide at the waistbands and 140–300 at the crotch.
+ * Each side is two cubics meeting at the crotch with a vertical tangent, so
+ * the curve stays smooth there instead of forming a cusp. The layers are
+ * wedges cut from the top-left corner, and every pin is placed inside both
+ * its own wedge and the silhouette.
+ *
+ * Labels live in the markup next door rather than inside the SVG, so they
+ * translate and reflow for Arabic without fighting text-anchor.
+ */
+interface Props { label: string }
+const { label } = Astro.props;
+
+const SHAPE = `M78 30 H362 C386 30 396 48 396 76
+               C396 150 300 190 300 280 C300 370 396 410 396 484
+               C396 512 386 530 362 530 H78
+               C54 530 44 512 44 484 C44 410 140 370 140 280
+               C140 190 44 150 44 76 C44 48 54 30 78 30 Z`;
+---
+
+<svg class="cutaway" viewBox="0 0 440 560" role="img" aria-label={label}>
+  <defs>
+    <clipPath id="cut-shape"><path d={SHAPE} /></clipPath>
+    <linearGradient id="cut-core" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f7dcae" />
+      <stop offset="1" stop-color="#eecb92" />
+    </linearGradient>
+  </defs>
+
+  <!-- Fastening tabs, drawn behind so they read as tucked under the waist -->
+  <g fill="#8ec7bd" stroke="#16302e" stroke-width="2" opacity="0.95">
+    <rect x="14" y="58" width="56" height="52" rx="14" />
+    <rect x="370" y="58" width="56" height="52" rx="14" />
+  </g>
+
+  <g clip-path="url(#cut-shape)">
+    <!-- 3 · back sheet: outermost, so it is the ground the others sit on.
+         The three layers are pitched far enough apart in tone to read as
+         separate materials — the whole point of the drawing. -->
+    <rect x="0" y="0" width="440" height="560" fill="#8ec7bd" />
+    <!-- 2 · absorbent core, peeled back from the top-left -->
+    <path d="M-40 -40 H380 L-40 470 Z" fill="url(#cut-core)" />
+    <!-- 1 · top sheet, the only layer against the skin -->
+    <path d="M-40 -40 H250 L-40 320 Z" fill="#ffffff" />
+
+    <!-- Torn edges, so the wedges read as lifted layers rather than flat shapes -->
+    <path d="M380 -40 L-40 470" fill="none" stroke="#c9a463" stroke-width="2.5" />
+    <path d="M250 -40 L-40 320" fill="none" stroke="#cfdedb" stroke-width="2.5" />
+
+    <!-- Channels that spread liquid along the core -->
+    <g stroke="#d9b478" stroke-width="1.6" fill="none" opacity="0.75">
+      <path d="M150 40 C168 170 168 400 150 522" />
+      <path d="M196 40 C206 170 206 400 196 522" />
+      <path d="M244 40 C234 170 234 400 244 522" />
+      <path d="M290 40 C272 170 272 400 290 522" />
+    </g>
+
+    <!-- Waistbands -->
+    <rect x="0" y="30" width="440" height="16" fill="#16302e" opacity="0.12" />
+    <rect x="0" y="514" width="440" height="16" fill="#16302e" opacity="0.12" />
+
+    <!-- 4 · wetness indicator, running down the centre of the crotch -->
+    <rect x="207" y="300" width="26" height="164" rx="13" fill="#9db6de" />
+    <rect x="207" y="300" width="26" height="74" rx="13" fill="#3f5fa2" />
+  </g>
+
+  <!-- Silhouette outline -->
+  <path d={SHAPE} fill="none" stroke="#16302e" stroke-width="2.5" opacity="0.85" />
+
+  <!-- Elasticated leak cuffs down each side -->
+  <g stroke="#16302e" stroke-width="1.6" opacity="0.32" fill="none" stroke-dasharray="7 6">
+    <path d="M66 54 C66 140 160 188 160 280 C160 372 66 420 66 506" />
+    <path d="M374 54 C374 140 280 188 280 280 C280 372 374 420 374 506" />
+  </g>
+
+  <!-- Numbered pins, matched to the list beside the figure -->
+  <g class="cut-pins" font-size="15" font-weight="700" text-anchor="middle">
+    <g><circle cx="100" cy="100" r="19" /><text x="100" y="106">1</text></g>
+    <g><circle cx="215" cy="130" r="19" /><text x="215" y="136">2</text></g>
+    <g><circle cx="300" cy="430" r="19" /><text x="300" y="436">3</text></g>
+    <g><circle cx="220" cy="380" r="19" /><text x="220" y="386">4</text></g>
+  </g>
+</svg>

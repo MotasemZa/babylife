@@ -27,6 +27,13 @@ const ui = {
   },
   quality: { en: 'Quality', ar: 'الجودة' },
   qualityHeading: { en: 'Every detail earns its place.', ar: 'كل تفصيل له سبب.' },
+  inside: { en: 'Inside the diaper', ar: 'داخل الحفاض' },
+  insideHeading: { en: 'Built in layers. Tested in Amman.', ar: 'مصنوع طبقةً بطبقة. ومُختبر في عمّان.' },
+  insideLede: {
+    en: 'A diaper is only as good as what it is made of. Here is what sits between your baby and the rest of the day.',
+    ar: 'الحفاض بجودة ما صُنع منه. هذا ما يفصل بين طفلك وبقية اليوم.',
+  },
+  insideFigure: { en: 'Cutaway diagram of a Baby Life diaper showing its layers', ar: 'رسم توضيحي مقطعي لحفاض بيبي لايف يبيّن طبقاته' },
   productGallery: { en: 'Product gallery', ar: 'معرض المنتجات' },
   fullRange: { en: 'The full range.', ar: 'التشكيلة الكاملة.' },
   fullRangeLede: {
@@ -141,6 +148,33 @@ export const benefits = [
   { en: ['Wetness indicator', 'A colour change tells you when it is time — no guessing.'], ar: ['مؤشّر البلل', 'تغيّر اللون يخبرك بموعد التغيير دون تخمين.'] },
   { en: ['Sustainable materials', 'Renewable-energy production lines and reduced waste.'], ar: ['مواد مستدامة', 'خطوط إنتاج تعمل بالطاقة المتجددة وتقلّل النفايات.'] },
   { en: ['Honest value', 'Premium protection at a price Jordanian families rely on.'], ar: ['قيمة صادقة', 'حماية عالية الجودة بسعر تعتمد عليه العائلات الأردنية.'] },
+];
+
+/**
+ * The construction shown in the cutaway diagram, outside in.
+ *
+ * These describe the standard build of a modern disposable diaper — the same
+ * four things every pack in the range is made of. Kept deliberately factual:
+ * no grammage, no percentages and no material brand names, none of which we
+ * can state without the spec sheet in front of us.
+ */
+export const layers = [
+  {
+    en: ['Soft top sheet', 'The only layer that touches the skin. Breathable, and chosen for how a newborn feels it rather than how it tests.'],
+    ar: ['طبقة علوية ناعمة', 'الطبقة الوحيدة الملامسة للبشرة. تسمح بالتهوية، ومختارة بحسب إحساس المولود بها لا بحسب نتائج الاختبار وحدها.'],
+  },
+  {
+    en: ['Absorbent core', 'Where the night is won. It draws moisture down and holds it there, away from the skin, instead of letting it spread.'],
+    ar: ['اللبّ الماص', 'هنا تُكسب الليلة. يسحب الرطوبة إلى الأسفل ويحتجزها بعيداً عن البشرة بدل أن يتركها تنتشر.'],
+  },
+  {
+    en: ['Breathable back sheet', 'Keeps what is inside in, and still lets air move — the balance that decides whether skin stays comfortable.'],
+    ar: ['طبقة خلفية تتنفّس', 'تحبس ما في الداخل وتسمح للهواء بالمرور — وهو التوازن الذي يحدّد راحة البشرة.'],
+  },
+  {
+    en: ['Wetness indicator', 'A stripe that changes colour, so a change is something you can see rather than guess at.'],
+    ar: ['مؤشّر البلل', 'شريط يغيّر لونه، فيصبح موعد التغيير أمراً تراه لا تخمّنه.'],
+  },
 ];
 
 /** Root path for a language ('' for English, '/ar' for Arabic). */

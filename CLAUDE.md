@@ -14,6 +14,12 @@ almost never the page templates.**
 - `src/data/pages.json` — About and Careers page bodies (HTML, EN + AR).
 - `src/data/site.json` — contact info, social URLs, hero copy, the 3 stats.
 - `src/lib/i18n.ts` — every UI string as `{ en, ar }`. Add new strings here, use `t(lang, key)`.
+  Also exports `benefits` (company claims) and `layers` (the four construction facts labelled
+  in the home page cutaway). Keep `layers` in step with `DiaperCutaway.astro`: the list index
+  is what the numbered pins in the drawing refer to.
+- `src/components/DiaperCutaway.astro` — the diaper cross-section on the home page, drawn in
+  SVG because the brand has pack shots but no photography of the product itself. Geometry is
+  documented in the file; pins must sit inside both their own layer wedge and the silhouette.
 - `src/styles/global.css` — the whole design system. CSS logical properties only
   (margin-inline-start, not margin-left) so RTL works automatically.
 - `src/views/*.astro` — one view per page type, shared by both languages via a `lang` prop.
