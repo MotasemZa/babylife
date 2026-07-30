@@ -4,6 +4,7 @@ import ProductCard from '../components/ProductCard.astro';
 import FollowBlock from '../components/FollowBlock.astro';
 import CtaBand from '../components/CtaBand.astro';
 import DiaperCutaway from '../components/DiaperCutaway.astro';
+import SizeFinder from '../components/SizeFinder.astro';
 import { t, base, benefits, layers, fmtDate, type Lang } from '../lib/i18n';
 import site from '../data/site.json';
 import ranges from '../data/ranges.json';
@@ -15,6 +16,10 @@ const { lang } = Astro.props;
 const b = base(lang);
 
 const heroProduct = products[0];
+/* The box render, not the bag: the jumbo bag's wrinkled film and baked-in
+   highlights read as cheap at hero size, while the carton holds its geometry.
+   The bag stays where it belongs — in the gallery, at card size. */
+const heroImage = '/images/2026/07/baby-life-box-packaging-box-packaging-4-1.webp';
 const galleryProducts = products.slice(0, 8);
 const latestPosts = posts.slice(0, 3);
 const rangeHero = (slug: string) => products.find((p) => p.ranges.includes(slug));
@@ -42,13 +47,14 @@ const description = lang === 'ar'
 
         <div class="hero-cta">
           <a class="btn btn-primary" href="#ranges">{t(lang, 'exploreRange')}</a>
-          <a class="btn btn-onDark" href={`${b}/contact/`}>{t(lang, 'becomeStockist')}</a>
+          <a class="btn btn-ghost" href={`${b}/contact/`}>{t(lang, 'becomeStockist')}</a>
         </div>
       </div>
 
       <div class="hero-media">
+        <div class="hero-stage" aria-hidden="true"></div>
         <img
-          src={heroProduct.thumb}
+          src={heroImage}
           alt={heroProduct.thumbAlt || heroProduct.title[lang]}
           width="800" height="800" fetchpriority="high"
         />
@@ -126,6 +132,8 @@ const description = lang === 'ar'
       </div>
     </div>
   </section>
+
+  <SizeFinder lang={lang} />
 
   <section class="section-tight" id="story">
     <div class="wrap">

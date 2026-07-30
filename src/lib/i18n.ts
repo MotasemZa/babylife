@@ -34,6 +34,20 @@ const ui = {
     ar: 'الحفاض بجودة ما صُنع منه. هذا ما يفصل بين طفلك وبقية اليوم.',
   },
   insideFigure: { en: 'Cutaway diagram of a Baby Life diaper showing its layers', ar: 'رسم توضيحي مقطعي لحفاض بيبي لايف يبيّن طبقاته' },
+  sizeFinder: { en: 'Size finder', ar: 'دليل المقاس' },
+  sizeFinderHeading: { en: 'What size is your baby?', ar: 'ما مقاس طفلك؟' },
+  sizeFinderLede: {
+    en: 'Slide to your baby’s weight and we will point at the right pack.',
+    ar: 'حرّك المؤشر إلى وزن طفلك وسندلّك على العبوة المناسبة.',
+  },
+  sizeFinderWeight: { en: 'Your baby weighs', ar: 'وزن طفلك' },
+  sizeFinderKg: { en: 'kg', ar: 'كغم' },
+  sizeFinderFits: { en: 'Fits size', ar: 'المقاس المناسب' },
+  sizeFinderAlso: {
+    en: 'Between two sizes? The larger one is usually the more comfortable night.',
+    ar: 'بين مقاسين؟ المقاس الأكبر عادةً هو الأريح ليلاً.',
+  },
+  sizeFinderCta: { en: 'See Baby Life Diapers', ar: 'شاهد حفاضات بيبي لايف' },
   productGallery: { en: 'Product gallery', ar: 'معرض المنتجات' },
   fullRange: { en: 'The full range.', ar: 'التشكيلة الكاملة.' },
   fullRangeLede: {

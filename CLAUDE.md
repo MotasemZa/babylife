@@ -20,6 +20,9 @@ almost never the page templates.**
 - `src/components/DiaperCutaway.astro` — the diaper cross-section on the home page, drawn in
   SVG because the brand has pack shots but no photography of the product itself. Geometry is
   documented in the file; pins must sit inside both their own layer wedge and the silhouette.
+- `src/components/SizeFinder.astro` — the weight→size widget on the home page. Its bands are
+  parsed at build time from the baby-life-diapers `chart` in products.json, so it can never
+  disagree with the printed size table; edit the chart, not the widget.
 - `src/styles/global.css` — the whole design system. CSS logical properties only
   (margin-inline-start, not margin-left) so RTL works automatically.
 - `src/views/*.astro` — one view per page type, shared by both languages via a `lang` prop.

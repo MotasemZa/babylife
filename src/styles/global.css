@@ -5,18 +5,23 @@
    ========================================================================== */
 
 :root {
-  --teal: #2f8f86;
-  --teal-deep: #1f6f6a;
-  --teal-ink: #16302e;
-  --teal-wash: #eaf4f2;
-  --sage: #f2f7f5;
-  --cream: #faf6ef;
-  --blue-tint: #eef4f8;
-  --blush: #f6d9d2;
-  --paper: #fffdf9;
-  --ink: #21312f;
-  --ink-soft: #52645f;
-  --line: #e3eae8;
+  /* Palette: light and neutral, with a single muted blue doing the accenting.
+     The variable names are inherited from the previous emerald scheme and are
+     kept deliberately — they are referenced in ~200 places, and renaming them
+     would churn the whole stylesheet without changing a pixel. Read --teal as
+     "accent", --teal-ink as "darkest ink". */
+  --teal: #4a7fa5;        /* accent: muted denim, calm rather than corporate */
+  --teal-deep: #2f5c7d;   /* 7:1 on white, so it is safe for small text */
+  --teal-ink: #1d2b36;    /* slate near-black, replacing the near-black green */
+  --teal-wash: #eef3f8;   /* the tint packs sit on */
+  --sage: #f4f6f8;        /* cool neutral band */
+  --cream: #f8f6f2;       /* warm neutral band, keeps the palette from going cold */
+  --blue-tint: #eaf1f7;
+  --blush: #f1dfd8;
+  --paper: #fdfdfc;
+  --ink: #263440;
+  --ink-soft: #5d6e7c;
+  --line: #e3e9ee;
   --white: #ffffff;
 
   --r-sm: 10px;
@@ -215,8 +220,14 @@ html[dir='ltr'] .nav-lang { font-family: 'Tajawal', sans-serif; }
 @media (max-width: 820px) {
   .nav { flex-wrap: wrap; padding-block: 0.6rem; min-height: 0; }
   .nav-toggle { display: block; }
-  .nav-lang { order: -1; margin-inline-start: auto; }
-  .nav-toggle { margin-inline-start: 0; }
+  /* Explicit order, because source order puts the language link last. The
+     brand leads; the pill and the toggle are pushed to the far end together.
+     Ordering the pill first instead let its auto margin swallow the free
+     space and drag the whole row — logo included — to the right. */
+  .brand { order: 0; }
+  .nav-lang { order: 1; margin-inline-start: auto; }
+  .nav-toggle { order: 2; margin-inline-start: 0.6rem; }
+  .nav-menu { order: 3; }
   .nav-menu {
     display: none;
     flex-direction: column;
@@ -312,12 +323,21 @@ html[dir='rtl'] .eyebrow { letter-spacing: 0.04em; }
    size, and only against a colour that lets a mostly-white pack read. */
 .hero {
   position: relative;
-  color: #fff;
   background:
-    radial-gradient(46rem 34rem at 78% 8%, color-mix(in srgb, var(--teal) 55%, transparent), transparent 70%),
-    radial-gradient(34rem 30rem at 4% 96%, color-mix(in srgb, #0f2b29 70%, transparent), transparent 72%),
-    linear-gradient(158deg, #1a4a46 0%, var(--teal-ink) 58%, #102523 100%);
+    radial-gradient(52rem 36rem at 74% -6%, var(--teal-wash), transparent 66%),
+    radial-gradient(38rem 30rem at -6% 104%, var(--cream), transparent 70%),
+    linear-gradient(180deg, var(--sage) 0%, var(--paper) 62%);
   overflow: clip;
+}
+/* A hairline instead of a hard edge — the hero is now the same value as the
+   section under it, so it needs something to close it off. */
+.hero::after {
+  content: '';
+  position: absolute;
+  inset-inline: 0;
+  bottom: 0;
+  height: 1px;
+  background: var(--line);
 }
 
 .hero-grid {
@@ -333,28 +353,27 @@ html[dir='rtl'] .eyebrow { letter-spacing: 0.04em; }
   align-items: center;
   gap: 0.8em;
   font-size: 0.95rem;
-  color: color-mix(in srgb, #fff 74%, transparent);
+  color: var(--ink-soft);
   margin-block-end: 1.4rem;
 }
-.bilingual .ar { font-family: 'Tajawal', sans-serif; font-weight: 700; color: #9fdcd4; }
-.bilingual .bar { width: 1px; height: 1.1em; background: color-mix(in srgb, #fff 30%, transparent); }
+.bilingual .ar { font-family: 'Tajawal', sans-serif; font-weight: 700; color: var(--teal-deep); }
+.bilingual .bar { width: 1px; height: 1.1em; background: var(--line); }
 
 /* Held below the global h1 ceiling: the hero headline shares its row with the
    pack, so the full display size would break it into single-word lines. */
 .hero h1 {
-  color: #fff;
   font-size: clamp(2.7rem, 5.2vw, 4.5rem);
   margin-block-end: 0.4em;
 }
 .hero h1 em {
   font-style: italic;
-  color: #7fd4c9;
+  color: var(--teal-deep);
 }
 html[dir='rtl'] .hero h1 em { font-style: normal; }
 
 .hero-lede {
   font-size: clamp(1.08rem, 1.6vw, 1.26rem);
-  color: color-mix(in srgb, #fff 80%, transparent);
+  color: var(--ink-soft);
   max-width: 36rem;
   margin-block-end: 2rem;
 }
@@ -369,19 +388,36 @@ html[dir='rtl'] .hero h1 em { font-style: normal; }
   place-items: center;
   padding-block: clamp(1rem, 3vw, 2rem);
 }
+/* Staged, not floated: a rounded backdrop panel behind, a pool of shadow
+   below. Together they read as a studio set — which is most of the distance
+   between "cut-out on a page" and "product shot". */
+.hero-stage {
+  position: absolute;
+  inset: 12% 2% 8%;
+  border-radius: var(--r-xl);
+  background:
+    radial-gradient(120% 100% at 50% -10%, #fff, transparent 58%),
+    linear-gradient(180deg, var(--teal-wash), color-mix(in srgb, var(--teal) 18%, var(--paper)));
+  border: 1px solid color-mix(in srgb, var(--teal) 14%, transparent);
+}
 .hero-media::before {
   content: '';
   position: absolute;
-  inset: 6% 2% 4%;
+  inset: auto 12% 7%;
+  height: 12%;
   border-radius: 50%;
-  background: radial-gradient(closest-side, color-mix(in srgb, #7fd4c9 30%, transparent), transparent 72%);
-  filter: blur(6px);
+  background: radial-gradient(closest-side, rgba(29, 43, 54, 0.2), transparent 74%);
+  filter: blur(10px);
+  z-index: 1;
 }
 .hero-media img {
   position: relative;
-  width: min(100%, 34rem);
-  filter: drop-shadow(0 34px 44px rgba(0, 0, 0, 0.42));
+  z-index: 2;
+  width: min(96%, 33rem);
+  filter: drop-shadow(0 24px 34px rgba(29, 43, 54, 0.22));
+  transition: transform 0.6s var(--ease);
 }
+.hero-media:hover img { transform: translateY(-6px) scale(1.015); }
 
 .hero-stats {
   display: grid;
@@ -390,21 +426,25 @@ html[dir='rtl'] .hero h1 em { font-style: normal; }
   list-style: none;
   margin: 0;
   padding: 0 0 clamp(2.6rem, 5vw, 4rem);
-  border-top: 1px solid color-mix(in srgb, #fff 16%, transparent);
+  border-top: 1px solid var(--line);
   padding-top: clamp(1.6rem, 3vw, 2.4rem);
 }
 .hero-stats li { display: grid; gap: 0.35em; }
+/* The figure carries dir="ltr" so "#1" and "30+" keep their glyph order, but
+   that also makes it align left inside an RTL column while its label aligns
+   right. Pin it back to the reading edge. */
+html[dir='rtl'] .hero-stats .n { text-align: right; }
 .hero-stats .n {
   font-family: var(--font-display);
   font-size: clamp(2rem, 3.6vw, 2.9rem);
   font-weight: 600;
   line-height: 1;
-  color: #7fd4c9;
+  color: var(--teal-deep);
 }
 .hero-stats .l {
   font-size: 0.9rem;
   line-height: 1.45;
-  color: color-mix(in srgb, #fff 72%, transparent);
+  color: var(--ink-soft);
   max-width: 26ch;
 }
 
@@ -454,10 +494,10 @@ html[dir='rtl'] .hero h1 em { font-style: normal; }
 
 /* Each range gets its own ground, so four cards in a row are not four
    identical grey squares. Tints are the pack colours, well desaturated. */
-.family[data-range='babylife']    { --range-tint: #e4f1ef; }
-.family[data-range='ladylife']    { --range-tint: #fbe7ef; }
-.family[data-range='adult-care']  { --range-tint: #e8eff8; }
-.family[data-range='life']        { --range-tint: #fdf1e0; }
+.family[data-range='babylife']    { --range-tint: #e7eff7; }
+.family[data-range='ladylife']    { --range-tint: #f6eaee; }
+.family[data-range='adult-care']  { --range-tint: #eaeef3; }
+.family[data-range='life']        { --range-tint: #f6f2ec; }
 
 .family .body { padding: 1.2rem 1.4rem 1.5rem; }
 .family .ar-name { font-family: 'Tajawal', sans-serif; font-weight: 700; color: var(--teal); font-size: 0.95rem; }
@@ -558,6 +598,101 @@ html[dir='rtl'] .hero h1 em { font-style: normal; }
 }
 .cut-layers h3 { margin: 0 0 0.25em; font-size: clamp(1.15rem, 1.8vw, 1.35rem); }
 .cut-layers p { margin: 0; color: var(--ink-soft); font-size: 0.98rem; line-height: 1.6; }
+
+/* Pin <-> list pairing: both sides answer to the same hover. */
+.cut-pins [data-layer] { cursor: pointer; }
+.cut-pins [data-layer] circle { transition: fill 0.2s var(--ease), r 0.2s var(--ease); }
+.cut-pins .is-hot circle { fill: var(--teal); r: 22; }
+.cut-layers li { transition: background 0.2s var(--ease); border-radius: var(--r-sm); }
+.cut-layers li.is-hot { background: color-mix(in srgb, var(--teal) 8%, transparent); }
+.cut-layers li.is-hot .cut-num { background: var(--teal); }
+
+/* ---- Size finder ---- */
+.finder {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: clamp(1.6rem, 4vw, 3rem);
+  align-items: center;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--r-xl);
+  padding: clamp(1.6rem, 4vw, 3rem);
+  box-shadow: var(--shadow-md);
+}
+@media (max-width: 800px) { .finder { grid-template-columns: 1fr; } }
+
+.finder-input label {
+  display: block;
+  font-weight: 600;
+  color: var(--ink-soft);
+  margin-block-end: 0.4rem;
+}
+.finder-readout {
+  display: flex;
+  align-items: baseline;
+  gap: 0.35em;
+  margin-block-end: 1rem;
+}
+html[dir='rtl'] .finder-readout { justify-content: flex-end; }
+.finder-readout output {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 6vw, 4.4rem);
+  font-weight: 600;
+  line-height: 1;
+  color: var(--teal-ink);
+}
+.finder-unit { font-size: 1.1rem; font-weight: 600; color: var(--ink-soft); }
+
+.finder input[type='range'] {
+  width: 100%;
+  height: 6px;
+  appearance: none;
+  background: linear-gradient(90deg, var(--teal-wash), var(--teal));
+  border-radius: 999px;
+  outline-offset: 6px;
+  cursor: pointer;
+}
+.finder input[type='range']::-webkit-slider-thumb {
+  appearance: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--white);
+  border: 3px solid var(--teal-deep);
+  box-shadow: var(--shadow-sm);
+}
+.finder input[type='range']::-moz-range-thumb {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--white);
+  border: 3px solid var(--teal-deep);
+  box-shadow: var(--shadow-sm);
+}
+
+.finder-result { display: grid; gap: 1rem; justify-items: start; }
+html[dir='rtl'] .finder-result { justify-items: start; }
+.finder-badge {
+  display: grid;
+  gap: 0.15em;
+  padding: 1.2rem 1.6rem;
+  border-radius: var(--r-lg);
+  background: var(--teal-wash);
+  border: 1px solid color-mix(in srgb, var(--teal) 22%, transparent);
+  min-width: 12rem;
+}
+.finder-fits { font-size: 0.8rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal-deep); }
+html[dir='rtl'] .finder-fits { letter-spacing: 0.02em; }
+.finder-size {
+  font-family: var(--font-display);
+  font-size: clamp(2.6rem, 5vw, 3.6rem);
+  font-weight: 600;
+  line-height: 1;
+  color: var(--teal-ink);
+}
+.finder-name { font-weight: 600; color: var(--ink); }
+.finder-band { font-size: 0.9rem; color: var(--ink-soft); }
+.finder-note { font-size: 0.9rem; color: var(--ink-soft); margin: 0; max-width: 34ch; }
 
 /* ---- Product tiles ---- */
 .gallery {
@@ -1028,14 +1163,18 @@ html[dir='rtl'] .site-footer h4 { letter-spacing: 0.03em; }
 .f-origin { display: inline-flex; align-items: center; gap: 1.2em; }
 .f-origin .jo-seal { background: rgba(255, 255, 255, 0.06); border-color: rgba(255, 255, 255, 0.15); color: #e9f2f0; }
 
-/* ---- Scroll reveal ---- */
+/* ---- Scroll reveal ----
+   Gated behind .js-reveal, which the head script only adds when it is
+   actually able to observe. Hiding by default meant that if the script failed
+   to run — blocked, errored, still loading — every revealed section stayed at
+   opacity 0 permanently and most of the home page was simply blank. */
 @media (prefers-reduced-motion: no-preference) {
-  .reveal {
+  .js-reveal .reveal {
     opacity: 0;
     transform: translateY(18px);
     transition: opacity 0.6s var(--ease), transform 0.6s var(--ease);
   }
-  .reveal.is-in { opacity: 1; transform: none; }
+  .js-reveal .reveal.is-in { opacity: 1; transform: none; }
 }
 
 /* ---- 404 ---- */

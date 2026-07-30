@@ -1,0 +1,114 @@
+---
+/**
+ * The size finder: slide to a weight, get the size.
+ *
+ * The one genuinely useful widget a diaper site can have. The bands come from
+ * the same chart the product page prints, parsed at build time — so the
+ * widget can never disagree with the printed table.
+ *
+ * Bands overlap by design (a 4 kg baby fits sizes 1, 2 and 3), so the finder
+ * recommends the band whose midpoint sits closest to the chosen weight and
+ * lists the neighbours as also-fits.
+ */
+import { t, base, type Lang } from '../lib/i18n';
+import products from '../data/products.json';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const b = base(lang);
+
+const diapers = products.find((p) => p.slug === 'baby-life-diapers');
+const chart = (diapers?.chart ?? []) as Array<{
+  size: string | number;
+  name_en: string;
+  name_ar: string;
+  wt_en: string;
+  wt_ar: string;
+}>;
+
+/* "2–5 kg" -> [2, 5]; "18+ kg" -> [18, 26] (open band, given a working top
+   so the midpoint maths has something to chew on). */
+const bands = chart.map((row) => {
+  const m = row.wt_en.match(/(\d+)(?:[–-](\d+))?\s*\+?/);
+  const lo = m ? Number(m[1]) : 0;
+  const hi = m && m[2] ? Number(m[2]) : lo + 8;
+  return {
+    size: String(row.size),
+    name: lang === 'ar' ? row.name_ar : row.name_en,
+    wt: lang === 'ar' ? row.wt_ar : row.wt_en,
+    lo,
+    hi,
+  };
+});
+
+const MIN = Math.min(...bands.map((x) => x.lo));
+const MAX = Math.max(...bands.map((x) => x.hi));
+const START = 8;
+---
+
+<section class="section section--tint-blue" id="size-finder">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">{t(lang, 'sizeFinder')}</span>
+      <h2>{t(lang, 'sizeFinderHeading')}</h2>
+      <p>{t(lang, 'sizeFinderLede')}</p>
+    </div>
+
+    <div class="finder reveal" data-bands={JSON.stringify(bands)}>
+      <div class="finder-input">
+        <label for="finder-kg">{t(lang, 'sizeFinderWeight')}</label>
+        <div class="finder-readout" dir="ltr">
+          <output id="finder-out" for="finder-kg">{START}</output>
+          <span class="finder-unit">{t(lang, 'sizeFinderKg')}</span>
+        </div>
+        <input type="range" id="finder-kg" min={MIN} max={MAX} step="0.5" value={START} dir="ltr" />
+      </div>
+
+      <div class="finder-result" aria-live="polite">
+        <div class="finder-badge">
+          <span class="finder-fits">{t(lang, 'sizeFinderFits')}</span>
+          <span class="finder-size" id="finder-size" dir="ltr"></span>
+          <span class="finder-name" id="finder-name"></span>
+          <span class="finder-band" id="finder-band" dir="ltr"></span>
+        </div>
+        <p class="finder-note" id="finder-note" hidden>{t(lang, 'sizeFinderAlso')}</p>
+        <a class="btn btn-primary" href={`${b}/products/baby-life-diapers/`}>{t(lang, 'sizeFinderCta')}</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  const finder = document.querySelector<HTMLElement>('.finder');
+  const slider = document.getElementById('finder-kg') as HTMLInputElement | null;
+
+  if (finder && slider) {
+    const bands = JSON.parse(finder.dataset.bands || '[]') as
+      Array<{ size: string; name: string; wt: string; lo: number; hi: number }>;
+
+    const out = document.getElementById('finder-out')!;
+    const elSize = document.getElementById('finder-size')!;
+    const elName = document.getElementById('finder-name')!;
+    const elBand = document.getElementById('finder-band')!;
+    const note = document.getElementById('finder-note')!;
+
+    const update = () => {
+      const kg = Number(slider.value);
+      out.textContent = String(kg);
+
+      const fits = bands.filter((b) => kg >= b.lo && kg <= b.hi);
+      /* Closest midpoint wins; an overlap means the note earns its keep. */
+      const pick = (fits.length ? fits : bands)
+        .slice()
+        .sort((a, b) => Math.abs(kg - (a.lo + a.hi) / 2) - Math.abs(kg - (b.lo + b.hi) / 2))[0];
+
+      elSize.textContent = pick.size;
+      elName.textContent = pick.name;
+      elBand.textContent = pick.wt;
+      note.hidden = fits.length < 2;
+    };
+
+    slider.addEventListener('input', update);
+    update();
+  }
+</script>

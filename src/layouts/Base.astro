@@ -53,6 +53,14 @@ const arPath = lang === 'ar' ? path : other;
     <meta property="og:image" content={new URL(ogImage, Astro.site)} />
     <meta property="og:locale" content={lang === 'ar' ? 'ar_JO' : 'en_US'} />
     <meta name="twitter:card" content="summary_large_image" />
+    <script is:inline>
+      // Opt in to the reveal animation only once we know we can finish it.
+      // Runs in head so the class lands before first paint, otherwise the
+      // sections flash in at full opacity and then jump.
+      if ('IntersectionObserver' in window) {
+        document.documentElement.classList.add('js-reveal');
+      }
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -166,6 +174,45 @@ const arPath = lang === 'ar' ? path : other;
         revealEls.forEach((el) => io.observe(el));
       } else {
         revealEls.forEach((el) => el.classList.add('is-in'));
+      }
+
+      const noMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      // Count-up on the hero figures. The digits animate; any prefix or
+      // suffix ("#", "+") stays put, so "#1" never flashes as "#0".
+      if (!noMotion) {
+        document.querySelectorAll('.hero-stats .n').forEach((el) => {
+          const m = (el.textContent || '').match(/^([^\d]*)(\d+)(.*)$/);
+          if (!m) return;
+          const [, pre, digits, post] = m;
+          const target = Number(digits);
+          const t0 = performance.now();
+          const dur = 900;
+          const tick = (now) => {
+            const p = Math.min(1, (now - t0) / dur);
+            const eased = 1 - Math.pow(1 - p, 3);
+            el.textContent = pre + String(Math.round(target * eased)) + post;
+            if (p < 1) requestAnimationFrame(tick);
+          };
+          requestAnimationFrame(tick);
+        });
+      }
+
+      // A few degrees of tilt on the cards, following the pointer. Hover
+      // devices only — on touch it would just fight the scroll.
+      if (!noMotion && window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+        document.querySelectorAll('.family, .tile, .follow-card').forEach((card) => {
+          card.addEventListener('pointermove', (e) => {
+            const r = card.getBoundingClientRect();
+            const x = (e.clientX - r.left) / r.width - 0.5;
+            const y = (e.clientY - r.top) / r.height - 0.5;
+            card.style.transform =
+              `perspective(700px) rotateX(${(-y * 5).toFixed(2)}deg) rotateY(${(x * 5).toFixed(2)}deg) translateY(-4px)`;
+          });
+          card.addEventListener('pointerleave', () => {
+            card.style.transform = '';
+          });
+        });
       }
     </script>
   </body>
